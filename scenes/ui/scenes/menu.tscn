@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bm13icvufb3i7"]
+
+[ext_resource type="Texture2D" uid="uid://bsdwipygg43h8" path="res://assets/bg.png" id="1_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cnqvc0uxtxnei" path="res://assets/menu_panel.png" id="2_v86rl"]
+[ext_resource type="FontFile" uid="uid://bw4jh5uos8cnt" path="res://assets/font/Milky Bun.ttf" id="3_13sgg"]
+[ext_resource type="Texture2D" uid="uid://6jja8vnkartw" path="res://assets/panel.png" id="4_i6lef"]
+[ext_resource type="Texture2D" uid="uid://fsiao05sbcq4" path="res://assets/clic.png" id="5_70i5f"]
+[ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/karataka_logo.png" id="6_g3eks"]
+[ext_resource type="Script" uid="uid://bkurqe3it85y7" path="res://scripts/play.gd" id="6_i6lef"]
+[ext_resource type="Script" uid="uid://bjkdnfomcxili" path="res://scripts/option.gd" id="7_70i5f"]
+[ext_resource type="Script" uid="uid://b7apcnhcdbb0c" path="res://scripts/quit.gd" id="9_70i5f"]
+[ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/logo_ispm.tscn" id="9_i6lef"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
+texture = ExtResource("4_i6lef")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mae5d"]
+texture = ExtResource("5_70i5f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytr4m"]
+texture = ExtResource("4_i6lef")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Control" type="Control" unique_id=257645822]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=1294519292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g3eks")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="logo_ispm" parent="background" unique_id=1141340616 instance=ExtResource("9_i6lef")]
+layout_mode = 1
+offset_left = 0.0
+offset_right = 0.0
+
+[node name="MenuPanel" type="TextureRect" parent="." unique_id=40354560]
+layout_mode = 0
+offset_left = 780.0
+offset_top = -10.0
+offset_right = 1155.0
+offset_bottom = 656.0
+texture = ExtResource("2_v86rl")
+
+[node name="Label" type="Label" parent="MenuPanel" unique_id=52142086]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 54.0
+offset_right = 268.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 40
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play" type="Button" parent="MenuPanel" unique_id=2144221088]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 177.0
+offset_right = 310.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
+theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
+theme_override_fonts/font = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
+text = "JOUER"
+script = ExtResource("6_i6lef")
+
+[node name="Option" type="Button" parent="MenuPanel" unique_id=741712639]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 276.0
+offset_right = 311.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
+theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
+theme_override_fonts/font = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
+text = "OPTION"
+script = ExtResource("7_70i5f")
+
+[node name="about" type="Button" parent="MenuPanel" unique_id=507579856]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 373.0
+offset_right = 309.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
+theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
+theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
+theme_override_fonts/font = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
+text = "A PROPOS"
+
+[node name="Quit" type="Button" parent="MenuPanel" unique_id=1146299109]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 470.0
+offset_right = 312.0
+offset_bottom = 559.0
+theme_override_colors/font_color = Color(11.771158, 2.231984, 2.7155366, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0.12156863, 1)
+theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
+theme_override_fonts/font = ExtResource("3_13sgg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
+text = "QUIT"
+script = ExtResource("9_70i5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1321508717]
+position = Vector2(363, 147)
+scale = Vector2(1.0318276, 1.0906041)
+texture = ExtResource("6_g3eks")
+
+[connection signal="pressed" from="MenuPanel/Option" to="MenuPanel/Option" method="_on_option_pressed"]
+[connection signal="pressed" from="MenuPanel/Quit" to="MenuPanel/Quit" method="_on_quit_pressed"]
