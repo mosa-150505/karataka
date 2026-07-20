@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cntjr7yxi7xtb"
-path="res://.godot/imported/normal_aply.png-e7d86241e14d6b84648648ca5a72e41a.ctex"
+path="res://.godot/imported/normal_aply.png-b2eb57002059827d6bfdc96c013a2829.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/options_panel/normal_aply.png"
-dest_files=["res://.godot/imported/normal_aply.png-e7d86241e14d6b84648648ca5a72e41a.ctex"]
+source_file="res://assets/ui/assets/options_panel/normal_aply.png"
+dest_files=["res://.godot/imported/normal_aply.png-b2eb57002059827d6bfdc96c013a2829.ctex"]
 
 [params]
 

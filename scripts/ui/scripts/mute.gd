@@ -1,7 +1,7 @@
 extends Button
 
-@onready var icon_unmuted = preload("res://assets/options_panel/unmute-removebg-preview.png")
-@onready var icon_muted = preload("res://assets/options_panel/mute.png")
+@onready var icon_unmuted = preload("res://assets/ui/assets/options_panel/unmute-removebg-preview.png")
+@onready var icon_muted = preload("res://assets/ui/assets/options_panel/mute.png")
 
 var is_muted = false
 

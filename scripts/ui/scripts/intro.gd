@@ -1,6 +1,6 @@
 extends Control
 
-var loading_screen_path: String = "res://scenes/menu.tscn"
+var loading_screen_path: String = "res://scenes/ui/scenes/menu.tscn"
 
 func _ready():
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)

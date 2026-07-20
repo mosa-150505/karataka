@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg63a8mexc3jl"
-path="res://.godot/imported/retour_btn-removebg-preview.png-045ed8e4a48e2f8a5c0013a6651b63a4.ctex"
+path="res://.godot/imported/retour_btn-removebg-preview.png-dd0ed3ab5e0ede668a9cf106c46475fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/options_panel/retour_btn-removebg-preview.png"
-dest_files=["res://.godot/imported/retour_btn-removebg-preview.png-045ed8e4a48e2f8a5c0013a6651b63a4.ctex"]
+source_file="res://assets/ui/assets/options_panel/retour_btn-removebg-preview.png"
+dest_files=["res://.godot/imported/retour_btn-removebg-preview.png-dd0ed3ab5e0ede668a9cf106c46475fe.ctex"]
 
 [params]
 

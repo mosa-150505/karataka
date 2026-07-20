@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://005hhulgdhm1"
-path="res://.godot/imported/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png-7f31cb8fd57592fda624526b41eccdd6.ctex"
+path="res://.godot/imported/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png-808c26294bda1fd8f929ccb2302193a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/logo/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png-7f31cb8fd57592fda624526b41eccdd6.ctex"]
+source_file="res://assets/ui/assets/logo/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png"
+dest_files=["res://.godot/imported/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png-808c26294bda1fd8f929ccb2302193a2.ctex"]
 
 [params]
 

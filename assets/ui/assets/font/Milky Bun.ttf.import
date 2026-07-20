@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bw4jh5uos8cnt"
-path="res://.godot/imported/Milky Bun.ttf-89fa82ac63dd06913dd0fe0ea5ed10f6.fontdata"
+path="res://.godot/imported/Milky Bun.ttf-2b23553088f1c231c3a0f463332328f9.fontdata"
 
 [deps]
 
-source_file="res://assets/font/Milky Bun.ttf"
-dest_files=["res://.godot/imported/Milky Bun.ttf-89fa82ac63dd06913dd0fe0ea5ed10f6.fontdata"]
+source_file="res://assets/ui/assets/font/Milky Bun.ttf"
+dest_files=["res://.godot/imported/Milky Bun.ttf-2b23553088f1c231c3a0f463332328f9.fontdata"]
 
 [params]
 

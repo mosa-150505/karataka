@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="k-game"
+run/main_scene="uid://ce4lxaktwpvw6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneManager="*uid://cdmu7ulast3aq"
 
 [physics]
 

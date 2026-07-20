@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3k1lomvbmsru"
-path="res://.godot/imported/brille_assets.png-4e76eb9274d9dceab632a61070c703c2.ctex"
+path="res://.godot/imported/brille_assets.png-e4fc46524e4f14ee741b978debfd5f66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/options_panel/brille_assets.png"
-dest_files=["res://.godot/imported/brille_assets.png-4e76eb9274d9dceab632a61070c703c2.ctex"]
+source_file="res://assets/ui/assets/options_panel/brille_assets.png"
+dest_files=["res://.godot/imported/brille_assets.png-e4fc46524e4f14ee741b978debfd5f66.ctex"]
 
 [params]
 

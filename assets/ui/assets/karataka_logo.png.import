@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg4ee5w3i2ika"
-path="res://.godot/imported/karataka_logo.png-9948e913cda922936a304de85d3e256b.ctex"
+path="res://.godot/imported/karataka_logo.png-95e0c5b52b3ae2b5bff66ff124d5343c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/karataka_logo.png"
-dest_files=["res://.godot/imported/karataka_logo.png-9948e913cda922936a304de85d3e256b.ctex"]
+source_file="res://assets/ui/assets/karataka_logo.png"
+dest_files=["res://.godot/imported/karataka_logo.png-95e0c5b52b3ae2b5bff66ff124d5343c.ctex"]
 
 [params]
 

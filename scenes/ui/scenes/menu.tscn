@@ -1,15 +1,14 @@
 [gd_scene format=3 uid="uid://bm13icvufb3i7"]
 
-[ext_resource type="Texture2D" uid="uid://bsdwipygg43h8" path="res://assets/bg.png" id="1_g3eks"]
-[ext_resource type="Texture2D" uid="uid://cnqvc0uxtxnei" path="res://assets/menu_panel.png" id="2_v86rl"]
-[ext_resource type="FontFile" uid="uid://bw4jh5uos8cnt" path="res://assets/font/Milky Bun.ttf" id="3_13sgg"]
-[ext_resource type="Texture2D" uid="uid://6jja8vnkartw" path="res://assets/panel.png" id="4_i6lef"]
-[ext_resource type="Texture2D" uid="uid://fsiao05sbcq4" path="res://assets/clic.png" id="5_70i5f"]
-[ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/karataka_logo.png" id="6_g3eks"]
-[ext_resource type="Script" uid="uid://bkurqe3it85y7" path="res://scripts/play.gd" id="6_i6lef"]
-[ext_resource type="Script" uid="uid://bjkdnfomcxili" path="res://scripts/option.gd" id="7_70i5f"]
-[ext_resource type="Script" uid="uid://b7apcnhcdbb0c" path="res://scripts/quit.gd" id="9_70i5f"]
-[ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/logo_ispm.tscn" id="9_i6lef"]
+[ext_resource type="Texture2D" uid="uid://bsdwipygg43h8" path="res://assets/ui/assets/bg.png" id="1_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cnqvc0uxtxnei" path="res://assets/ui/assets/menu_panel.png" id="2_v86rl"]
+[ext_resource type="FontFile" uid="uid://bw4jh5uos8cnt" path="res://assets/ui/assets/font/Milky Bun.ttf" id="3_13sgg"]
+[ext_resource type="Texture2D" uid="uid://6jja8vnkartw" path="res://assets/ui/assets/panel.png" id="4_i6lef"]
+[ext_resource type="Texture2D" uid="uid://fsiao05sbcq4" path="res://assets/ui/assets/clic.png" id="5_70i5f"]
+[ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/ui/assets/karataka_logo.png" id="6_g3eks"]
+[ext_resource type="Script" uid="uid://bjkdnfomcxili" path="res://scripts/ui/scripts/option.gd" id="7_70i5f"]
+[ext_resource type="Script" uid="uid://b7apcnhcdbb0c" path="res://scripts/ui/scripts/quit.gd" id="9_70i5f"]
+[ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/ui/scenes/logo_ispm.tscn" id="9_i6lef"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
 texture = ExtResource("4_i6lef")
@@ -84,7 +83,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
 text = "JOUER"
-script = ExtResource("6_i6lef")
 
 [node name="Option" type="Button" parent="MenuPanel" unique_id=741712639]
 layout_mode = 0

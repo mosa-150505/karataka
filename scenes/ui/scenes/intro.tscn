@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ce4lxaktwpvw6"]
 
-[ext_resource type="Script" uid="uid://c2fl581l6ud5y" path="res://scripts/intro.gd" id="1_i2l1n"]
-[ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/karataka_logo.png" id="2_i2l1n"]
-[ext_resource type="Texture2D" uid="uid://t5h8bgurehpw" path="res://assets/bg_intro.png" id="2_wfs7u"]
-[ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/logo_ispm.tscn" id="3_i2l1n"]
+[ext_resource type="Script" uid="uid://c2fl581l6ud5y" path="res://scripts/ui/scripts/intro.gd" id="1_i2l1n"]
+[ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/ui/assets/karataka_logo.png" id="2_i2l1n"]
+[ext_resource type="Texture2D" uid="uid://t5h8bgurehpw" path="res://assets/ui/assets/bg_intro.png" id="2_wfs7u"]
+[ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/ui/scenes/logo_ispm.tscn" id="3_i2l1n"]
 
 [sub_resource type="Animation" id="Animation_i2l1n"]
 length = 0.001
