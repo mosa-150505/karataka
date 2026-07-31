@@ -1,0 +1,201 @@
+{
+    "activeFile": "scene_banque.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "U_C.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "U_C_Blanc.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "U_C_noir.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "alerte.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "argent1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "argent2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "argent3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "bureau_bidirectionnel.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "bureau_droit.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "bureau_gauche.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "caisse.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "camera.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "carrelage1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "certificat.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "chaise_SE.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "chaise_SO.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "coffre.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "crotte.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "eau_filtrée.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "extincteur.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "extincteur1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "gab.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "murSE.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "murSO.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "porte.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "pot_de_fleur.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "pot_de_fleur1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "pot_de_fleur2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "projecteur.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "projecteur1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "scene_banque.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 1457,
+                "y": 894
+            }
+        },
+        "tiroir.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/home/Henintsoa_Faneva/IGGLIA_ISPM/projet/Projetv2/banque-karataka/maps",
+    "map.height": 25,
+    "map.lastUsedFormat": "tmx",
+    "map.orientation": null,
+    "map.tileHeight": 64,
+    "map.tileWidth": 128,
+    "map.width": 25,
+    "openFiles": [
+        "scene_banque.tmx",
+        "alerte.tsx",
+        "argent1.tsx",
+        "argent2.tsx",
+        "argent3.tsx",
+        "bureau_bidirectionnel.tsx",
+        "bureau_droit.tsx",
+        "bureau_gauche.tsx",
+        "caisse.tsx",
+        "camera.tsx",
+        "carrelage1.tsx",
+        "certificat.tsx",
+        "chaise_SE.tsx",
+        "chaise_SO.tsx",
+        "coffre.tsx",
+        "crotte.tsx",
+        "eau_filtrée.tsx",
+        "extincteur.tsx",
+        "extincteur1.tsx",
+        "gab.tsx",
+        "murSE.tsx",
+        "murSO.tsx",
+        "porte.tsx",
+        "pot_de_fleur.tsx",
+        "pot_de_fleur1.tsx",
+        "pot_de_fleur2.tsx",
+        "projecteur.tsx",
+        "projecteur1.tsx",
+        "tiroir.tsx",
+        "U_C_Blanc.tsx",
+        "U_C_noir.tsx",
+        "U_C.tsx"
+    ],
+    "project": "scene_banque.tiled-project",
+    "recentFiles": [
+        "U_C.tsx",
+        "U_C_noir.tsx",
+        "U_C_Blanc.tsx",
+        "tiroir.tsx",
+        "projecteur1.tsx",
+        "projecteur.tsx",
+        "pot_de_fleur2.tsx",
+        "pot_de_fleur1.tsx",
+        "pot_de_fleur.tsx",
+        "porte.tsx",
+        "murSO.tsx",
+        "murSE.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 199,
+        "width": 97
+    },
+    "tileset.useTransparentColor": true
+}

@@ -1,0 +1,27 @@
+{
+    "activeFile": "alerte.tsx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "alerte.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "scene_banque": {
+            "scale": 0.5097343750000001,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1601.8146706311497,
+                "y": 800.4168837936425
+            }
+        }
+    },
+    "openFiles": [
+        "alerte.tsx"
+    ],
+    "project": "scene_banque_karataka.tiled-project",
+    "recentFiles": [
+        "alerte.tsx",
+        "scene_banque"
+    ]
+}
