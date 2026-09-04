@@ -1,0 +1,48 @@
+keys,fr,en,mg
+UI_MENU_TITLE,MENU,MENU,MENU
+UI_PLAY,JOUER,PLAY,MILALAO
+UI_SETTINGS,PARAMETRE,SETTINGS,SAFIDY
+UI_STORY,HISTOIRE,STORY,TANTARA
+UI_QUIT,QUITTER,QUIT,MIVOAKA
+UI_MUSIC,MUSIQUE,MUSIC,MOZIKA
+UI_EFFECTS,EFFETS,EFFECTS,FEO
+UI_APPLY,APPLIQUER,APPLY,EKENA
+UI_LANGUAGE,LANGUE,LANGUAGE,FITENY
+UI_STORY_TITLE,HISTOIRE,STORY,TANTARA
+UI_STORY_BODY,"🌱 Une ferme pour demain
+
+Dans un monde où l'énergie devient de plus en plus chère et les ressources naturelles de plus en plus rares, l'agriculture est en difficulté.
+
+Tu reprends une petite exploitation familiale presque abandonnée. Avec peu de moyens, tu décides de lui donner une nouvelle vie en utilisant les énergies renouvelables.
+
+Au fil du jeu, tu devras cultiver tes terres, gérer tes ressources et développer des installations comme des panneaux solaires, des éoliennes et des systèmes de récupération d'eau.
+
+Ton objectif sera de faire grandir ta ferme tout en trouvant le meilleur équilibre entre production, économie d'énergie et protection de l'environnement.
+
+À toi de construire la ferme du futur. 🌾
+","🌱 A Farm for Tomorrow
+
+In a world where energy is becoming more expensive and natural resources are running out, agriculture is facing major challenges.
+
+You take over a small family farm that has been nearly abandoned. With limited resources, you decide to give it a new life by using renewable energy.
+
+Grow your crops, manage your resources, and develop technologies such as solar panels, wind turbines, and water recovery systems.
+
+Your goal is to find the right balance between production, energy efficiency, and environmental protection.
+
+Build the farm of the future. 🌾
+","🌱 Toeram-pambolena ho an'ny ampitso
+
+Ao anatin'ny tontolo iray izay mihamahery ny vidin'ny angovo ary mihavitsy ny harena voajanahary, dia miatrika olana lehibe ny fambolena.
+
+Hahazo toeram-pambolena kely an'ny fianakavianao ianao, izay saika nilaozana. Na dia voafetra aza ny fitaovana anananao, dia manapa-kevitra ny hanarina azy amin'ny fampiasana angovo azo havaozina ianao.
+
+Mamboly, mitantana ny loharanon-karena ary manangana teknolojia toy ny panneaux solaires, éoliennes ary rafitra fanangonana rano.
+
+Ny tanjonao dia ny hahita fifandanjana eo amin'ny famokarana, fitsitsiana angovo ary fiarovana ny tontolo iainana.
+
+Amboary ny toeram-pambolena ho an'ny ho avy. 🌾
+"
+UI_STORY_BACK,RETOUR,BACK,MIVERINA
+UI_GAME_PLACEHOLDER,"Niveau en construction...","Level under construction...","Mbola atao ilay ambaratonga..."
+UI_GAME_BACK,RETOUR AU MENU,BACK TO MENU,MIVERINA ANY AMIN'NY MENU

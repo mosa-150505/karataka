@@ -11,8 +11,25 @@ config_version=5
 [application]
 
 config/name="k-game"
+run/main_scene="uid://ce4lxaktwpvw6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://resources/audio/bus_layout.tres"
+
+[autoload]
+
+SceneManager="*uid://cdmu7ulast3aq"
+LocaleManager="*res://scripts/global/locale_manager.gd"
+AudioManager="*res://scripts/global/audio_manager.gd"
+
+[display]
+
+window/size/viewport_width=1365
+window/size/viewport_height=768
+window/stretch/mode="canvas_items"
 
 [physics]
 
