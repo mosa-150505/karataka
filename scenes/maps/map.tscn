@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cynvsmde2j3wf"]
+
+[ext_resource type="Texture2D" uid="uid://tfrduvqbfrx2" path="res://assets/map/mapSprite.jpeg" id="1_fwjtt"]
+[ext_resource type="Script" uid="uid://detrui4n766xj" path="res://scenes/maps/script_for_map/house_2.gd" id="2_aewf8"]
+[ext_resource type="Texture2D" uid="uid://nyxvnk02bcy7" path="res://assets/map/banque.png" id="2_ce1uw"]
+[ext_resource type="Texture2D" uid="uid://bgprghmlrilw0" path="res://assets/map/house2.png" id="2_idmyr"]
+[ext_resource type="Texture2D" uid="uid://bp8s8u1y3oi32" path="res://assets/map/tsena.png" id="3_1gdup"]
+[ext_resource type="Texture2D" uid="uid://b35tofirxgnrn" path="res://assets/map/house1.png" id="3_xltkm"]
+[ext_resource type="Script" uid="uid://dg14quw15wifl" path="res://scenes/maps/script_for_map/house_1.gd" id="4_lwbun"]
+[ext_resource type="Script" uid="uid://duwuvn3hqu3dl" path="res://scenes/maps/script_for_map/banque.gd" id="4_xltkm"]
+[ext_resource type="Script" uid="uid://bbdn4k61pmji7" path="res://scenes/maps/script_for_map/tsena.gd" id="6_elcdo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jpo4d"]
+radius = 113.017715
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_spqy2"]
+radius = 113.004425
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nk46p"]
+radius = 126.66886
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbfjn"]
+radius = 113.0177
+
+[node name="main" type="Node2D" unique_id=1280137192]
+
+[node name="world" type="Node2D" parent="." unique_id=1093707573]
+
+[node name="terrain" type="Node2D" parent="world" unique_id=870839020]
+
+[node name="map_sprite" type="Sprite2D" parent="world/terrain" unique_id=1313878349]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.843956, 0.84375006)
+texture = ExtResource("1_fwjtt")
+
+[node name="batiment" type="Node2D" parent="world" unique_id=1601060358]
+
+[node name="house2" type="Area2D" parent="world/batiment" unique_id=683749959]
+script = ExtResource("2_aewf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/batiment/house2" unique_id=1151123186]
+position = Vector2(858.99994, 177)
+scale = Vector2(0.9304265, 0.9718993)
+texture = ExtResource("2_idmyr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/batiment/house2" unique_id=1415431696]
+position = Vector2(885, 170.00003)
+rotation = -0.5905685
+shape = SubResource("CircleShape2D_jpo4d")
+
+[node name="house1" type="Area2D" parent="world/batiment" unique_id=1108771747]
+script = ExtResource("4_lwbun")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/batiment/house1" unique_id=1943479724]
+position = Vector2(298.00003, 176)
+scale = Vector2(0.9714715, 0.95066667)
+texture = ExtResource("3_xltkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/batiment/house1" unique_id=1515518555]
+position = Vector2(275, 145)
+shape = SubResource("CircleShape2D_spqy2")
+
+[node name="banque" type="Area2D" parent="world/batiment" unique_id=520479954]
+script = ExtResource("4_xltkm")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/batiment/banque" unique_id=1363126462]
+position = Vector2(802, 419)
+texture = ExtResource("2_ce1uw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/batiment/banque" unique_id=1714826120]
+position = Vector2(815, 448)
+shape = SubResource("CircleShape2D_nk46p")
+
+[node name="tsena" type="Area2D" parent="world/batiment" unique_id=354222735]
+script = ExtResource("6_elcdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/batiment/tsena" unique_id=598266212]
+position = Vector2(464.5, 395.25)
+rotation = -0.063345976
+scale = Vector2(1.0165166, 0.9906667)
+texture = ExtResource("3_1gdup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/batiment/tsena" unique_id=1503324999]
+position = Vector2(478, 385)
+shape = SubResource("CircleShape2D_wbfjn")
