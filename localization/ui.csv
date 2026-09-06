@@ -46,3 +46,9 @@ Amboary ny toeram-pambolena ho an'ny ho avy. 🌾
 UI_STORY_BACK,RETOUR,BACK,MIVERINA
 UI_GAME_PLACEHOLDER,"Niveau en construction...","Level under construction...","Mbola atao ilay ambaratonga..."
 UI_GAME_BACK,RETOUR AU MENU,BACK TO MENU,MIVERINA ANY AMIN'NY MENU
+UI_LOADING,CHARGEMENT...,LOADING...,MIANDRASA KELY...
+UI_BUILDING_BANK,BANQUE (bientot disponible),BANK (coming soon),BANKY (ho avy)
+UI_BUILDING_MARKET,MARCHE (bientot disponible),MARKET (coming soon),TSENA (ho avy)
+UI_BUILDING_HOUSE1,MAISON (bientot disponible),HOUSE (coming soon),TRANO (ho avy)
+UI_BUILDING_HOUSE2,FERME (bientot disponible),FARMHOUSE (coming soon),TOKANTRANO (ho avy)
+UI_BACK_TO_MAP,RETOUR A LA CARTE,BACK TO MAP,MIVERINA ANY AMIN'NY SARITANY
