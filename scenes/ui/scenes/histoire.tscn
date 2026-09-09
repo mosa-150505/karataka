@@ -59,9 +59,9 @@ texture = ExtResource("2_panel")
 [node name="title" type="Label" parent="main_panel" unique_id=1535386898]
 layout_mode = 0
 offset_left = 77.0
-offset_top = 55.0
+offset_top = 77.0
 offset_right = 857.0
-offset_bottom = 121.0
+offset_bottom = 143.0
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 48
@@ -75,9 +75,9 @@ text_key = "UI_STORY_TITLE"
 [node name="body_scroll" type="ScrollContainer" parent="main_panel" unique_id=1346051315]
 layout_mode = 0
 offset_left = 81.0
-offset_top = 119.0
+offset_top = 155.0
 offset_right = 821.0
-offset_bottom = 573.0
+offset_bottom = 586.0
 horizontal_scroll_mode = 0
 script = ExtResource("8_hide_scroll")
 
@@ -97,10 +97,10 @@ text_key = "UI_STORY_BODY"
 
 [node name="return" type="Button" parent="." unique_id=463211529]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 42.0
-offset_right = 113.0
-offset_bottom = 107.0
+offset_left = 30.0
+offset_top = 37.0
+offset_right = 100.0
+offset_bottom = 110.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_return_normal")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_return_pressed")
 theme_override_styles/hover = SubResource("StyleBoxTexture_return_hover")

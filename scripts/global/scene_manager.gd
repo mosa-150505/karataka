@@ -9,7 +9,6 @@ var pending_scene_path: String = ""
 var pending_scene_data: Dictionary = {}
 
 func go_to_scene(scene_path: String) -> void:
-	# Debloque la pause et force l'affichage du curseur
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
