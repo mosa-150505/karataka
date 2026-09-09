@@ -10,8 +10,8 @@
 [ext_resource type="Script" uid="uid://du0nsn271oseb" path="res://scripts/ui/scripts/mute.gd" id="6_u8bav"]
 [ext_resource type="Script" uid="uid://c3xpuwet00cjj" path="res://scripts/ui/scripts/return.gd" id="7_0totx"]
 [ext_resource type="Texture2D" uid="uid://v41gg3wpipcy" path="res://assets/ui/assets/options_panel/a-removebg-preview.png" id="9_046j0"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/language_button.gd" id="10_lang"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/translatable.gd" id="11_tr"]
+[ext_resource type="Script" uid="uid://fnrt1b7eiaqx" path="res://scripts/ui/scripts/language_button.gd" id="10_lang"]
+[ext_resource type="Script" uid="uid://cqi87lco2g40g" path="res://scripts/ui/scripts/translatable.gd" id="11_tr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0totx"]
 
@@ -81,31 +81,31 @@ texture = ExtResource("2_4u85i")
 
 [node name="music" type="Label" parent="main_panel" unique_id=68535030]
 layout_mode = 0
-offset_left = 77.75
+offset_left = 87.75
 offset_top = 95.625
-offset_right = 128.75
-offset_bottom = 144.625
+offset_right = 356.75
+offset_bottom = 158.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
 theme_override_font_sizes/font_size = 50
 text = "UI_MUSIC"
 
-[node name="Translator" type="Node" parent="main_panel/music"]
+[node name="Translator" type="Node" parent="main_panel/music" unique_id=1125448658]
 script = ExtResource("11_tr")
 text_key = "UI_MUSIC"
 
 [node name="effect" type="Label" parent="main_panel" unique_id=650234857]
 layout_mode = 0
-offset_left = 75.75
+offset_left = 85.75
 offset_top = 187.625
-offset_right = 252.75
-offset_bottom = 316.625
+offset_right = 420.75
+offset_bottom = 260.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
 theme_override_font_sizes/font_size = 50
 text = "UI_EFFECTS"
 
-[node name="Translator" type="Node" parent="main_panel/effect"]
+[node name="Translator" type="Node" parent="main_panel/effect" unique_id=1137637653]
 script = ExtResource("11_tr")
 text_key = "UI_EFFECTS"
 
@@ -122,15 +122,14 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_yfa30")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_u8bav")
 expand_icon = true
 script = ExtResource("6_u8bav")
-target = "music"
 
-[node name="mute_sfx" type="Button" parent="main_panel"]
+[node name="mute_sfx" type="Button" parent="main_panel" unique_id=1867479789]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 0
-offset_left = 547.75
-offset_top = 190.0
-offset_right = 675.75
-offset_bottom = 318.0
+offset_left = 545.25
+offset_top = 151.625
+offset_right = 673.25
+offset_bottom = 279.625
 theme_override_constants/icon_max_width = 64
 theme_override_styles/normal = SubResource("StyleBoxEmpty_0totx")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_yfa30")
@@ -139,38 +138,37 @@ expand_icon = true
 script = ExtResource("6_u8bav")
 target = "sfx"
 
-[node name="language" type="Label" parent="main_panel"]
+[node name="language" type="Label" parent="main_panel" unique_id=93214830]
 layout_mode = 0
-offset_left = 75.75
-offset_top = 300.0
-offset_right = 300.0
-offset_bottom = 349.0
+offset_left = 86.25
+offset_top = 262.625
+offset_right = 469.25
+offset_bottom = 325.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 50
 text = "UI_LANGUAGE"
 
-[node name="Translator" type="Node" parent="main_panel/language"]
+[node name="Translator" type="Node" parent="main_panel/language" unique_id=44307832]
 script = ExtResource("11_tr")
 text_key = "UI_LANGUAGE"
 
-[node name="LanguageContainer" type="HBoxContainer" parent="main_panel"]
+[node name="LanguageContainer" type="HBoxContainer" parent="main_panel" unique_id=1236531939]
 layout_mode = 0
-offset_left = 78.0
-offset_top = 350.0
-offset_right = 470.0
-offset_bottom = 400.0
+offset_left = 129.25
+offset_top = 328.625
+offset_right = 521.25
+offset_bottom = 378.625
 theme_override_constants/separation = 16
 
-[node name="fr_button" type="Button" parent="main_panel/LanguageContainer"]
+[node name="fr_button" type="Button" parent="main_panel/LanguageContainer" unique_id=1273033609]
 custom_minimum_size = Vector2(90, 45)
 layout_mode = 2
 toggle_mode = true
 text = "FR"
 script = ExtResource("10_lang")
-locale_code = "fr"
 
-[node name="en_button" type="Button" parent="main_panel/LanguageContainer"]
+[node name="en_button" type="Button" parent="main_panel/LanguageContainer" unique_id=2011015474]
 custom_minimum_size = Vector2(90, 45)
 layout_mode = 2
 toggle_mode = true
@@ -178,7 +176,7 @@ text = "EN"
 script = ExtResource("10_lang")
 locale_code = "en"
 
-[node name="mg_button" type="Button" parent="main_panel/LanguageContainer"]
+[node name="mg_button" type="Button" parent="main_panel/LanguageContainer" unique_id=529823095]
 custom_minimum_size = Vector2(90, 45)
 layout_mode = 2
 toggle_mode = true
@@ -208,7 +206,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_51g7h")
 theme_override_styles/hover = SubResource("StyleBoxTexture_046j0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1602825455]
-position = Vector2(573, 73)
+position = Vector2(670, 83)
 scale = Vector2(0.5794702, 0.6135135)
 texture = ExtResource("9_046j0")
 
