@@ -15,12 +15,12 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	# Récupérer les touches de déplacement (vecteur normalisé d'une longueur max de 1.0)
+	# Maka an'ilay touche de déplacement
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 
-	# ========================================
-	# AUCUNE TOUCHE → RAKOTO RESTE IMMOBILE
-	# ========================================
+	# ===================================================
+	# Raha tsisy touche potserina →  RAKOTO mouvement idle
+	# ===================================================
 	if input_dir.is_zero_approx():
 		direction = Vector2.ZERO
 		velocity = Vector2.ZERO
@@ -28,7 +28,7 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 		return
 
-	# ========================================
+	# =========================================
 	# CONVERSION EN DÉPLACEMENT ISOMÉTRIQUE
 	# ========================================
 	var iso_dir := Vector2(
@@ -54,6 +54,6 @@ func _physics_process(_delta: float) -> void:
 func update_animation() -> void:
 	animated_sprite.scale = Vector2(1.0, 1.0)
 	
-	# Puisque le cas immobile est déjà traité plus haut, 
-	# si le code arrive ici, Rakoto est forcément en train de marcher.
+	# walk_ne ihany aloa fa tsy ilaina ny sasany
 	animated_sprite.play("walk_ne")
+	
