@@ -1,0 +1,79 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/ui/assets/bg.png" id="1_bg"]
+[ext_resource type="FontFile" path="res://assets/ui/assets/font/Milky Bun.ttf" id="2_font"]
+[ext_resource type="Texture2D" path="res://assets/ui/assets/options_panel/retour_btn-removebg-preview.png" id="3_return_normal"]
+[ext_resource type="Texture2D" path="res://assets/ui/assets/options_panel/clic_return.png" id="4_return_pressed"]
+[ext_resource type="Script" path="res://scripts/ui/scripts/return.gd" id="5_return_script"]
+[ext_resource type="Script" path="res://scripts/ui/scripts/translatable.gd" id="6_tr"]
+[ext_resource type="Script" path="res://scripts/ui/scripts/game_audio.gd" id="7_audio"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_normal"]
+texture = ExtResource("3_return_normal")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_pressed"]
+texture = ExtResource("4_return_pressed")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_hover"]
+texture = ExtResource("3_return_normal")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_audio")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="placeholder_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -40.0
+offset_right = 300.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 36
+text = "UI_GAME_PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Translator" type="Node" parent="placeholder_label"]
+script = ExtResource("6_tr")
+text_key = "UI_GAME_PLACEHOLDER"
+
+[node name="return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 690.0
+offset_right = 787.0
+offset_bottom = 750.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_return_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_return_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_return_hover")
+script = ExtResource("5_return_script")
+
+[connection signal="pressed" from="return" to="return" method="_on_return_pressed"]

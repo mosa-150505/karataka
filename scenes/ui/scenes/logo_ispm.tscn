@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b5mtngpcb627t"]
+
+[ext_resource type="Texture2D" uid="uid://005hhulgdhm1" path="res://assets/logo/Gemini_Generated_Image_s74aobs74aobs74a-removebg-preview.png" id="1_fp3xj"]
+
+[node name="logo_ispm" type="Control" unique_id=1141340616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="logo" type="Sprite2D" parent="." unique_id=201545660]
+position = Vector2(71, 55.999996)
+scale = Vector2(0.31715193, 0.29087976)
+texture = ExtResource("1_fp3xj")
