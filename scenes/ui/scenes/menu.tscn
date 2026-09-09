@@ -6,13 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://6jja8vnkartw" path="res://assets/ui/assets/panel.png" id="4_i6lef"]
 [ext_resource type="Texture2D" uid="uid://fsiao05sbcq4" path="res://assets/ui/assets/clic.png" id="5_70i5f"]
 [ext_resource type="Texture2D" uid="uid://dg4ee5w3i2ika" path="res://assets/ui/assets/karataka_logo.png" id="6_g3eks"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/play.gd" id="7_play"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/translatable.gd" id="7_tr"]
 [ext_resource type="Script" uid="uid://bjkdnfomcxili" path="res://scripts/ui/scripts/option.gd" id="7_70i5f"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/histoire.gd" id="8_histoire"]
+[ext_resource type="Script" uid="uid://bkurqe3it85y7" path="res://scripts/ui/scripts/play.gd" id="7_play"]
+[ext_resource type="Script" uid="uid://cqi87lco2g40g" path="res://scripts/ui/scripts/translatable.gd" id="7_tr"]
+[ext_resource type="Script" uid="uid://cvehackf7r1bx" path="res://scripts/ui/scripts/histoire.gd" id="8_histoire"]
 [ext_resource type="Script" uid="uid://b7apcnhcdbb0c" path="res://scripts/ui/scripts/quit.gd" id="9_70i5f"]
 [ext_resource type="PackedScene" uid="uid://b5mtngpcb627t" path="res://scenes/ui/scenes/logo_ispm.tscn" id="9_i6lef"]
-[ext_resource type="Script" path="res://scripts/ui/scripts/menu_audio.gd" id="10_audio"]
+[ext_resource type="Script" uid="uid://0q83glt6dr3j" path="res://scripts/ui/scripts/menu_audio.gd" id="10_audio"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
 texture = ExtResource("4_i6lef")
@@ -73,11 +73,11 @@ text = "UI_MENU_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Translator" type="Node" parent="MenuPanel/Label"]
+[node name="Translator" type="Node" parent="MenuPanel/Label" unique_id=532988673]
 script = ExtResource("7_tr")
 text_key = "UI_MENU_TITLE"
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="MenuPanel"]
+[node name="ButtonsContainer" type="VBoxContainer" parent="MenuPanel" unique_id=1986011395]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 177.0
@@ -93,14 +93,14 @@ theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
 theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
 theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
 theme_override_fonts/font = ExtResource("3_13sgg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
 text = "UI_PLAY"
 script = ExtResource("7_play")
 
-[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/play"]
+[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/play" unique_id=677270961]
 script = ExtResource("7_tr")
 text_key = "UI_PLAY"
 
@@ -112,14 +112,14 @@ theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
 theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
 theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
 theme_override_fonts/font = ExtResource("3_13sgg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
 text = "UI_SETTINGS"
 script = ExtResource("7_70i5f")
 
-[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/Option"]
+[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/Option" unique_id=606779937]
 script = ExtResource("7_tr")
 text_key = "UI_SETTINGS"
 
@@ -131,14 +131,14 @@ theme_override_colors/font_color = Color(0.7326616, 1.4369954, 0, 0.8117647)
 theme_override_colors/font_hover_color = Color(1, 0.9411765, 0.12156863, 1)
 theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
 theme_override_fonts/font = ExtResource("3_13sgg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
 text = "UI_STORY"
 script = ExtResource("8_histoire")
 
-[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/histoire"]
+[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/histoire" unique_id=1495901810]
 script = ExtResource("7_tr")
 text_key = "UI_STORY"
 
@@ -150,14 +150,14 @@ theme_override_colors/font_color = Color(11.771158, 2.231984, 2.7155366, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0.12156863, 1)
 theme_override_colors/font_outline_color = Color(0.6173882, 6.016344e-07, 0.3231609, 1)
 theme_override_fonts/font = ExtResource("3_13sgg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxTexture_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mae5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ytr4m")
 text = "UI_QUIT"
 script = ExtResource("9_70i5f")
 
-[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/Quit"]
+[node name="Translator" type="Node" parent="MenuPanel/ButtonsContainer/Quit" unique_id=428862779]
 script = ExtResource("7_tr")
 text_key = "UI_QUIT"
 
