@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://dg14quw15wifl" path="res://scenes/maps/script_for_map/house_1.gd" id="4_lwbun"]
 [ext_resource type="Script" uid="uid://duwuvn3hqu3dl" path="res://scenes/maps/script_for_map/banque.gd" id="4_xltkm"]
 [ext_resource type="Script" uid="uid://bbdn4k61pmji7" path="res://scenes/maps/script_for_map/tsena.gd" id="6_elcdo"]
+[ext_resource type="Texture2D" uid="uid://5des67hv0eth" path="res://exit_idle.png" id="10_bb6qu"]
+[ext_resource type="Texture2D" uid="uid://2xwl5j0pd6be" path="res://exit_hover.png" id="11_xvi8g"]
+[ext_resource type="Script" uid="uid://c3xpuwet00cjj" path="res://scripts/ui/scripts/return.gd" id="12_yr6hx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jpo4d"]
 radius = 113.017715
@@ -21,6 +24,19 @@ radius = 126.66886
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbfjn"]
 radius = 113.0177
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j868g"]
+texture = ExtResource("10_bb6qu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sgmyf"]
+texture = ExtResource("11_xvi8g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_314gp"]
+texture = ExtResource("11_xvi8g")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [node name="main" type="Node2D" unique_id=1280137192]
 
@@ -84,3 +100,15 @@ texture = ExtResource("3_1gdup")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world/batiment/tsena" unique_id=1503324999]
 position = Vector2(478, 385)
 shape = SubResource("CircleShape2D_wbfjn")
+
+[node name="return" type="Button" parent="." unique_id=1107639990]
+offset_left = 43.0
+offset_top = 42.0
+offset_right = 113.0
+offset_bottom = 107.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_j868g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sgmyf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_314gp")
+script = ExtResource("12_yr6hx")
+
+[connection signal="pressed" from="return" to="return" method="_on_return_pressed"]

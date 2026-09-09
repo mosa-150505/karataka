@@ -2,13 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://d1pt8otlbsb2u" path="res://assets/ui/assets/options_panel/option_bg.jpg" id="1_qt2fl"]
 [ext_resource type="Texture2D" uid="uid://ki5myh8n57et" path="res://assets/ui/assets/options_panel/main_panel.png" id="2_4u85i"]
-[ext_resource type="Texture2D" uid="uid://cg63a8mexc3jl" path="res://assets/ui/assets/options_panel/retour_btn-removebg-preview.png" id="3_0chu7"]
 [ext_resource type="FontFile" uid="uid://bw4jh5uos8cnt" path="res://assets/ui/assets/font/Milky Bun.ttf" id="3_1e2sa"]
-[ext_resource type="Texture2D" uid="uid://cntjr7yxi7xtb" path="res://assets/ui/assets/options_panel/normal_aply.png" id="3_uyxjx"]
-[ext_resource type="Texture2D" uid="uid://dejxw5wmhv4cn" path="res://assets/ui/assets/options_panel/clic_return.png" id="4_glgj2"]
-[ext_resource type="Texture2D" uid="uid://b04mdnaq0qrn1" path="res://assets/ui/assets/options_panel/apply.png" id="6_23mno"]
 [ext_resource type="Script" uid="uid://du0nsn271oseb" path="res://scripts/ui/scripts/mute.gd" id="6_u8bav"]
+[ext_resource type="Texture2D" uid="uid://5des67hv0eth" path="res://exit_idle.png" id="7_0tkwo"]
 [ext_resource type="Script" uid="uid://c3xpuwet00cjj" path="res://scripts/ui/scripts/return.gd" id="7_0totx"]
+[ext_resource type="Texture2D" uid="uid://2xwl5j0pd6be" path="res://exit_hover.png" id="8_k6hse"]
 [ext_resource type="Texture2D" uid="uid://v41gg3wpipcy" path="res://assets/ui/assets/options_panel/a-removebg-preview.png" id="9_046j0"]
 [ext_resource type="Script" uid="uid://fnrt1b7eiaqx" path="res://scripts/ui/scripts/language_button.gd" id="10_lang"]
 [ext_resource type="Script" uid="uid://cqi87lco2g40g" path="res://scripts/ui/scripts/translatable.gd" id="11_tr"]
@@ -20,26 +18,13 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8bav"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glgj2"]
-texture = ExtResource("3_0chu7")
+texture = ExtResource("7_0tkwo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyxjx"]
-texture = ExtResource("4_glgj2")
+texture = ExtResource("7_0tkwo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_23mno"]
-texture = ExtResource("3_0chu7")
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1e2sa"]
-texture = ExtResource("3_uyxjx")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51g7h"]
-texture = ExtResource("6_23mno")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_046j0"]
-texture = ExtResource("3_uyxjx")
+texture = ExtResource("8_k6hse")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
@@ -88,7 +73,7 @@ offset_bottom = 158.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
 theme_override_font_sizes/font_size = 50
-text = "UI_MUSIC"
+text = "MUSIC"
 
 [node name="Translator" type="Node" parent="main_panel/music" unique_id=1125448658]
 script = ExtResource("11_tr")
@@ -103,7 +88,7 @@ offset_bottom = 260.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
 theme_override_font_sizes/font_size = 50
-text = "UI_EFFECTS"
+text = "EFFECTS"
 
 [node name="Translator" type="Node" parent="main_panel/effect" unique_id=1137637653]
 script = ExtResource("11_tr")
@@ -147,7 +132,7 @@ offset_bottom = 325.625
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_1e2sa")
 theme_override_font_sizes/font_size = 50
-text = "UI_LANGUAGE"
+text = "LANGUAGE"
 
 [node name="Translator" type="Node" parent="main_panel/language" unique_id=44307832]
 script = ExtResource("11_tr")
@@ -155,10 +140,10 @@ text_key = "UI_LANGUAGE"
 
 [node name="LanguageContainer" type="HBoxContainer" parent="main_panel" unique_id=1236531939]
 layout_mode = 0
-offset_left = 129.25
-offset_top = 328.625
-offset_right = 521.25
-offset_bottom = 378.625
+offset_left = 230.25
+offset_top = 338.625
+offset_right = 534.25
+offset_bottom = 383.625
 theme_override_constants/separation = 16
 
 [node name="fr_button" type="Button" parent="main_panel/LanguageContainer" unique_id=1273033609]
@@ -186,24 +171,14 @@ locale_code = "mg"
 
 [node name="return" type="Button" parent="." unique_id=1425841078]
 layout_mode = 0
-offset_left = 313.0
-offset_top = 557.0
-offset_right = 522.0
-offset_bottom = 637.0
+offset_left = 34.0
+offset_top = 54.0
+offset_right = 110.0
+offset_bottom = 125.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_glgj2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uyxjx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_23mno")
 script = ExtResource("7_0totx")
-
-[node name="apply" type="Button" parent="." unique_id=1028082581]
-layout_mode = 0
-offset_left = 616.0
-offset_top = 554.0
-offset_right = 825.0
-offset_bottom = 634.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_1e2sa")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_51g7h")
-theme_override_styles/hover = SubResource("StyleBoxTexture_046j0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1602825455]
 position = Vector2(670, 83)

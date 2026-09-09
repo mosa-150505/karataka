@@ -3,20 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://d1pt8otlbsb2u" path="res://assets/ui/assets/options_panel/option_bg.jpg" id="1_bg"]
 [ext_resource type="Texture2D" uid="uid://ki5myh8n57et" path="res://assets/ui/assets/options_panel/main_panel.png" id="2_panel"]
 [ext_resource type="FontFile" uid="uid://bw4jh5uos8cnt" path="res://assets/ui/assets/font/Milky Bun.ttf" id="3_font"]
-[ext_resource type="Texture2D" uid="uid://cg63a8mexc3jl" path="res://assets/ui/assets/options_panel/retour_btn-removebg-preview.png" id="4_return_normal"]
-[ext_resource type="Texture2D" uid="uid://dejxw5wmhv4cn" path="res://assets/ui/assets/options_panel/clic_return.png" id="5_return_pressed"]
+[ext_resource type="Texture2D" uid="uid://5des67hv0eth" path="res://exit_idle.png" id="6_mm58f"]
 [ext_resource type="Script" uid="uid://c3xpuwet00cjj" path="res://scripts/ui/scripts/return.gd" id="6_return_script"]
+[ext_resource type="Texture2D" uid="uid://2xwl5j0pd6be" path="res://exit_hover.png" id="7_kdytl"]
 [ext_resource type="Script" uid="uid://cqi87lco2g40g" path="res://scripts/ui/scripts/translatable.gd" id="7_tr"]
 [ext_resource type="Script" uid="uid://31do1xjnhik4" path="res://scripts/ui/scripts/hide_scrollbar.gd" id="8_hide_scroll"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_normal"]
-texture = ExtResource("4_return_normal")
+texture = ExtResource("6_mm58f")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_pressed"]
-texture = ExtResource("5_return_pressed")
+texture = ExtResource("7_kdytl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_return_hover"]
-texture = ExtResource("4_return_normal")
+texture = ExtResource("7_kdytl")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
@@ -48,10 +48,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -477.5
-offset_top = -296.0
-offset_right = 489.5
-offset_bottom = 332.0
+offset_left = -411.5
+offset_top = -362.0
+offset_right = 507.5
+offset_bottom = 347.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_panel")
@@ -65,7 +65,7 @@ offset_bottom = 121.0
 theme_override_colors/font_color = Color(1, 1, 0.34117648, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 48
-text = "UI_STORY_TITLE"
+text = "STORY"
 horizontal_alignment = 1
 
 [node name="Translator" type="Node" parent="main_panel/title" unique_id=636813713]
@@ -74,10 +74,10 @@ text_key = "UI_STORY_TITLE"
 
 [node name="body_scroll" type="ScrollContainer" parent="main_panel" unique_id=1346051315]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 116.0
-offset_right = 850.0
-offset_bottom = 507.0
+offset_left = 81.0
+offset_top = 119.0
+offset_right = 821.0
+offset_bottom = 573.0
 horizontal_scroll_mode = 0
 script = ExtResource("8_hide_scroll")
 
@@ -97,10 +97,10 @@ text_key = "UI_STORY_BODY"
 
 [node name="return" type="Button" parent="." unique_id=463211529]
 layout_mode = 0
-offset_left = 627.0
-offset_top = 659.0
-offset_right = 794.0
-offset_bottom = 707.0
+offset_left = 43.0
+offset_top = 42.0
+offset_right = 113.0
+offset_bottom = 107.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_return_normal")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_return_pressed")
 theme_override_styles/hover = SubResource("StyleBoxTexture_return_hover")
