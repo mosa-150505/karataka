@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nlfm4w34bt1k"
-path="res://.godot/imported/motion_eolienne1.png-e1a479664ad434eb2fc90e8c7b429957.ctex"
+uid="uid://dowheoleexlwy"
+path="res://.godot/imported/Home_Rakoto.png-f3442a61d216ba68564ba88be4ba57bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eolienne/motion_eolienne1.png"
-dest_files=["res://.godot/imported/motion_eolienne1.png-e1a479664ad434eb2fc90e8c7b429957.ctex"]
+source_file="res://Scène_Home_Rakoto/Home_Rakoto.png"
+dest_files=["res://.godot/imported/Home_Rakoto.png-f3442a61d216ba68564ba88be4ba57bd.ctex"]
 
 [params]
 

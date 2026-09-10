@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://gig85x7omou8"]
+
+[ext_resource type="Texture2D" uid="uid://bbl5nv16yl5o" path="res://Vache/sprite_vache/eat_cow.png" id="1_x7b87"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tj2e"]
+atlas = ExtResource("1_x7b87")
+region = Rect2(1710, 1710, 342, 342)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htdsf"]
+atlas = ExtResource("1_x7b87")
+region = Rect2(2052, 1710, 342, 342)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8oso"]
+atlas = ExtResource("1_x7b87")
+region = Rect2(0, 2052, 342, 342)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4o8kx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tj2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htdsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8oso")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="Vache3" type="AnimatedSprite2D" unique_id=825755611]
+scale = Vector2(0.7485381, 0.83625734)
+sprite_frames = SubResource("SpriteFrames_4o8kx")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.35351527

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dbm5kiq02a6vi"]
+
+[ext_resource type="Script" uid="uid://bqt52ysroin5n" path="res://inventory_ui.gd" id="1_5v8q7"]
+
+[node name="InventoryUI" type="Control" unique_id=847754394]
+layout_mode = 3
+anchor_top = 0.0050000004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -0.40000057
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5v8q7")

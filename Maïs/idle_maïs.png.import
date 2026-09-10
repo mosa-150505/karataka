@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dofj3lgtmdsqh"
-path="res://.godot/imported/ChatGPT Image 6 sept. 2026, 21_02_34(1).png-e0c9d1b47d9da89164bbd301ada7238c.ctex"
+uid="uid://dljlljjqc6pt0"
+path="res://.godot/imported/idle_maïs.png-cf5b599cedc27c299136a902ace7caa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eolienne/ChatGPT Image 6 sept. 2026, 21_02_34(1).png"
-dest_files=["res://.godot/imported/ChatGPT Image 6 sept. 2026, 21_02_34(1).png-e0c9d1b47d9da89164bbd301ada7238c.ctex"]
+source_file="res://Maïs/idle_maïs.png"
+dest_files=["res://.godot/imported/idle_maïs.png-cf5b599cedc27c299136a902ace7caa1.ctex"]
 
 [params]
 

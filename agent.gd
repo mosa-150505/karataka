@@ -19,7 +19,7 @@ var _tween_texte: Tween
 # --- Variables d'état et de données (Initialisation) ---
 var player_in_zone: bool = false
 var is_talking: bool = false
-var solde_ariary: int = 0
+
 var mode_attente_choix: bool = false
 var question_actuelle: Dictionary
 
@@ -92,11 +92,11 @@ func proposer_tour() -> void:
 	btn_oui.show()
 	btn_non.show()
 	
-	btn_oui.text = "" if solde_ariary == 0 else ""
-	btn_non.text = ""
+	#btn_oui.text = "Lancer la Roulette" if GameState.money == 0 else "Continuer"
+	#btn_non.text = "Quitter le jeu"
 	
-	var phrase = "L'Agent : Bienvenue à la Roulette Financière. Votre solde actuel est de " + str(solde_ariary) + " Ar. Voulez-vous lancer la roulette ou préférez-vous quitter le jeu ?"
-	_lancer_effet_machine(phrase) 
+	var phrase = "L'Agent : Bienvenue à la Roulette Financière. Votre solde actuel est de " + str(GameState.money) + " Ar. Voulez-vous lancer la roulette ou préférez-vous quitter le jeu ?"
+	_lancer_effet_machine(phrase)
 	_mettre_a_jour_avatar(phrase)
 
 
@@ -123,34 +123,32 @@ func _on_answer_submitted(player_answer: String) -> void:
 	
 	if reponse_nettoye == question_actuelle["reponse_correcte"]:
 		var gain = int(question_actuelle["reponse_correcte"])
-		solde_ariary += gain
+		GameState.add_money(gain) # AJOUT AU STOCK GLOBAL
 		
 		if animated_sprite.sprite_frames.has_animation("motion_congrat"):
 			animated_sprite.play("motion_congrat")
 			
-		var réponse = "L'Agent : C'est une excellente réponse ! Vous gagnez la valeur acquise complète de " + str(gain) + " Ar.\nVotre nouveau solde est de : " + str(solde_ariary) + " Ar."
-		_lancer_effet_machine(réponse)
+		var txt = "L'Agent : C'est une excellente réponse ! Vous gagnez la valeur acquise complète de " + str(gain) + " Ar.\nVotre nouveau solde est de : " + str(GameState.money) + " Ar."
+		_lancer_effet_machine(txt)
 	else:
 		var perte = question_actuelle["interets"]
-		solde_ariary -= perte
+		GameState.spend_money(perte) # RETRAIT DU STOCK GLOBAL (Sécurisé à 0 Ar minimum)
 		
 		if animated_sprite.sprite_frames.has_animation("motion_deception"):
 			animated_sprite.play("motion_deception")
 			
-		var réponse = "L'Agent : Mauvaise réponse ! La réponse exacte était " + question_actuelle["reponse_correcte"] + " Ar.\nVous perdez les intérêts soit " + str(perte) + " Ar.\nVotre nouveau solde est de : " + str(solde_ariary) + " Ar."
-		_lancer_effet_machine(réponse)
+		var txt_echec = ""
+		if GameState.money == 0:
+			txt_echec = "L'Agent : Mauvaise réponse ! La réponse exacte était " + question_actuelle["reponse_correcte"] + " Ar.\nVous perdez vos intérêts et votre solde retombe à 0 Ar !"
+		else:
+			txt_echec = "L'Agent : Mauvaise réponse ! La réponse exacte était " + question_actuelle["reponse_correcte"] + " Ar.\nVous perdez les intérêts soit " + str(perte) + " Ar.\nVotre nouveau solde est de : " + str(GameState.money) + " Ar."
+		
+		_lancer_effet_machine(txt_echec)
 		btn_cheat.show()
 
 	_mettre_a_jour_avatar(dialogue_label.text)
-
-	# Miandry 4 secondes pour laisser lire le résultat avant le tour suivant
 	await get_tree().create_timer(4.0).timeout
 	proposer_tour()
-
-func quitter_dialogue() -> void:
-	dialog_box.hide()
-	avatar_rect.hide()
-	is_talking = false
 
 # --- 🎲 ANALYSE TEXTUELLE ET CHARGEMENT DU PORTRAIT ---
 func _mettre_a_jour_avatar(texte_complet: String) -> void:
@@ -175,6 +173,12 @@ func _mettre_a_jour_avatar(texte_complet: String) -> void:
 	else:
 		avatar_rect.hide()
 
+# --- 🛠️ CORRECTION DU BUG : DÉCLARATION DE LA FONCTION MANQUANTE ---
+func quitter_dialogue() -> void:
+	dialog_box.hide()
+	avatar_rect.hide()
+	is_talking = false
+
 # ==========================================
 # CALLBACK METHODS (Signaux d'UI et de zone)
 # ===========================================
@@ -184,7 +188,8 @@ func _on_btn_oui_pressed() -> void:
 
 func _on_btn_non_pressed() -> void:
 	if mode_attente_choix:
-		dialogue_label.text = "L'Agent : C'est la fin du jeu ! Vous repartez avec un montant final de " + str(solde_ariary) + " Ar. Merci d'avoir joué !"
+		# CORRECTION DU SOLDE : Changement de 'solde_ariary' pour 'GameState.money'
+		dialogue_label.text = "L'Agent : C'est la fin du jeu ! Vous repartez avec un montant final de " + str(GameState.money) + " Ar. Merci d'avoir joué !"
 		_mettre_a_jour_avatar(dialogue_label.text)
 		btn_oui.hide()
 		btn_non.hide()
@@ -205,29 +210,15 @@ func _on_player_exited(body: Node2D) -> void:
 		player_in_zone = false
 		quitter_dialogue()
 
-
-
-
-# --- Fonction magique pour l'effet typewriter à copier tout en bas du script ---
+# --- Fonction magique pour l'effet typewriter ---
 func _lancer_effet_machine(texte_a_afficher: String) -> void:
-	# 1. On applique le texte au label
 	dialogue_label.text = texte_a_afficher
-	
-	# 2. On commence avec 0 caractère visible (écran vide)
 	dialogue_label.visible_characters = 0
 	
-	# 3. Si un ancien effet tournait encore, on le coupe pour éviter les conflits
 	if _tween_texte:
 		_tween_texte.kill()
 		
-	# 4. On crée le nouveau Tween pour animer les lettres
 	_tween_texte = create_tween()
-	
-	# Calcule le nombre total de lettres dans la phrase
 	var nombre_de_lettres = texte_a_afficher.length()
-	
-	# Vitesse d'écriture : par exemple 0.03 seconde par lettre (ajustez à votre guise !)
 	var duree_totale = nombre_de_lettres * 0.03
-	
-	# Fait varier la propriété "visible_characters" de 0 jusqu'au nombre total de lettres
 	_tween_texte.tween_property(dialogue_label, "visible_characters", nombre_de_lettres, duree_totale)

@@ -1,0 +1,565 @@
+[gd_scene format=3 uid="uid://dsqldyxv1dl0h"]
+
+[ext_resource type="Texture2D" uid="uid://dowheoleexlwy" path="res://Scène_Home_Rakoto/Home_Rakoto.png" id="1_yne1g"]
+[ext_resource type="Script" uid="uid://bqt52ysroin5n" path="res://inventory_ui.gd" id="2_62rcx"]
+[ext_resource type="PackedScene" uid="uid://dik1yv7ig7q23" path="res://PlanteCliquable.tscn" id="3_62rcx"]
+[ext_resource type="Texture2D" uid="uid://ccbk285f3rhkf" path="res://Vache/vache_knock.png" id="4_2ij74"]
+[ext_resource type="PackedScene" uid="uid://d02mmcsuqyvfa" path="res://vache_1.tscn" id="4_wbr5x"]
+[ext_resource type="PackedScene" uid="uid://gig85x7omou8" path="res://vache_3.tscn" id="6_2ty0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jhy4"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3dls"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odklu"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvv4d"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j45s0"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb6rb"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dflr"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6l1i"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uive5"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(768, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mcxn"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(1024, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nih0s"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(0, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4bsg"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(256, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e88nf"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(512, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67ifv"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(768, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wktgr"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(1024, 512, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq7ga"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(0, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfq3e"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(256, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtieh"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(512, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usnxv"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(768, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e74c6"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(1024, 768, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvcdj"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(0, 1024, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2355f"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(256, 1024, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikfcq"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(512, 1024, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxv1"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(768, 1024, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wglbu"]
+atlas = ExtResource("4_2ij74")
+region = Rect2(1024, 1024, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfshq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jhy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3dls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odklu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvv4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j45s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb6rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dflr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6l1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uive5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mcxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nih0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4bsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e88nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67ifv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wktgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq7ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfq3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtieh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usnxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e74c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvcdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2355f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikfcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jxv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wglbu")
+}],
+"loop": 1,
+"name": &"cow_knocking",
+"speed": 4.0
+}]
+
+[node name="Home_Rakoto" type="Node2D" unique_id=957265717]
+
+[node name="FermeBackground" type="Sprite2D" parent="." unique_id=788155692]
+position = Vector2(960.8699, 529)
+scale = Vector2(1.4229103, 0.9424893)
+texture = ExtResource("1_yne1g")
+
+[node name="InventoryUI" type="Control" parent="." unique_id=847754394]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("2_62rcx")
+
+[node name="MaisCliquable" parent="." unique_id=967558024 instance=ExtResource("3_62rcx")]
+offset_left = 235.0
+offset_top = 621.0
+offset_right = 296.0
+offset_bottom = 677.0
+
+[node name="MaisCliquable2" parent="." unique_id=562169426 instance=ExtResource("3_62rcx")]
+offset_left = 185.0
+offset_top = 640.0
+offset_right = 246.0
+offset_bottom = 696.0
+
+[node name="MaisCliquable3" parent="." unique_id=15425268 instance=ExtResource("3_62rcx")]
+offset_left = 128.0
+offset_top = 663.0
+offset_right = 189.0
+offset_bottom = 719.0
+
+[node name="MaisCliquable4" parent="." unique_id=469083552 instance=ExtResource("3_62rcx")]
+offset_left = 148.0
+offset_top = 686.0
+offset_right = 209.0
+offset_bottom = 742.0
+
+[node name="MaisCliquable5" parent="." unique_id=1359070015 instance=ExtResource("3_62rcx")]
+offset_left = 193.0
+offset_top = 668.0
+offset_right = 254.0
+offset_bottom = 724.0
+
+[node name="MaisCliquable6" parent="." unique_id=1614235985 instance=ExtResource("3_62rcx")]
+offset_left = 253.0
+offset_top = 645.0
+offset_right = 314.0
+offset_bottom = 701.0
+
+[node name="MaisCliquable7" parent="." unique_id=2057758604 instance=ExtResource("3_62rcx")]
+offset_left = 200.0
+offset_top = 713.0
+offset_right = 261.0
+offset_bottom = 769.0
+
+[node name="MaisCliquable8" parent="." unique_id=437609255 instance=ExtResource("3_62rcx")]
+offset_left = 333.0
+offset_top = 668.0
+offset_right = 394.0
+offset_bottom = 724.0
+
+[node name="MaisCliquable9" parent="." unique_id=1629498107 instance=ExtResource("3_62rcx")]
+offset_left = 314.0
+offset_top = 665.0
+offset_right = 375.0
+offset_bottom = 721.0
+
+[node name="MaisCliquable10" parent="." unique_id=2081679059 instance=ExtResource("3_62rcx")]
+offset_left = 350.0
+offset_top = 688.0
+offset_right = 411.0
+offset_bottom = 744.0
+
+[node name="MaisCliquable11" parent="." unique_id=1069969853 instance=ExtResource("3_62rcx")]
+offset_left = 409.0
+offset_top = 702.0
+offset_right = 470.0
+offset_bottom = 758.0
+
+[node name="MaisCliquable12" parent="." unique_id=2063614103 instance=ExtResource("3_62rcx")]
+offset_left = 318.0
+offset_top = 702.0
+offset_right = 379.0
+offset_bottom = 758.0
+
+[node name="MaisCliquable13" parent="." unique_id=855415409 instance=ExtResource("3_62rcx")]
+offset_left = 368.0
+offset_top = 700.0
+offset_right = 429.0
+offset_bottom = 756.0
+
+[node name="MaisCliquable14" parent="." unique_id=1181805949 instance=ExtResource("3_62rcx")]
+offset_left = 314.0
+offset_top = 734.0
+offset_right = 375.0
+offset_bottom = 790.0
+
+[node name="MaisCliquable15" parent="." unique_id=2013875552 instance=ExtResource("3_62rcx")]
+offset_left = 239.0
+offset_top = 730.0
+offset_right = 300.0
+offset_bottom = 786.0
+
+[node name="MaisCliquable16" parent="." unique_id=266385365 instance=ExtResource("3_62rcx")]
+offset_left = 324.0
+offset_top = 718.0
+offset_right = 385.0
+offset_bottom = 774.0
+
+[node name="MaisCliquable17" parent="." unique_id=917659770 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 664.0
+offset_right = 337.0
+offset_bottom = 720.0
+
+[node name="MaisCliquable18" parent="." unique_id=286673776 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 664.0
+offset_right = 337.0
+offset_bottom = 720.0
+
+[node name="ManiocCliquable" parent="." unique_id=1892924134 instance=ExtResource("3_62rcx")]
+offset_left = 257.0
+offset_top = 695.0
+offset_right = 321.0
+offset_bottom = 759.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable2" parent="." unique_id=613986468 instance=ExtResource("3_62rcx")]
+offset_left = 258.0
+offset_top = 713.0
+offset_right = 322.0
+offset_bottom = 777.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable3" parent="." unique_id=227634362 instance=ExtResource("3_62rcx")]
+offset_left = 256.0
+offset_top = 728.0
+offset_right = 320.0
+offset_bottom = 792.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable4" parent="." unique_id=1199494596 instance=ExtResource("3_62rcx")]
+offset_left = 291.0
+offset_top = 715.0
+offset_right = 355.0
+offset_bottom = 779.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable5" parent="." unique_id=1632618524 instance=ExtResource("3_62rcx")]
+offset_left = 291.0
+offset_top = 736.0
+offset_right = 355.0
+offset_bottom = 800.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable6" parent="." unique_id=82861820 instance=ExtResource("3_62rcx")]
+offset_left = 301.0
+offset_top = 676.0
+offset_right = 365.0
+offset_bottom = 740.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable7" parent="." unique_id=1391601044 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 676.0
+offset_right = 340.0
+offset_bottom = 740.0
+nom_de_la_plante = "Manioc"
+
+[node name="RizCliquable" parent="." unique_id=1005936214 instance=ExtResource("3_62rcx")]
+offset_left = 905.0
+offset_top = 845.0
+offset_right = 969.0
+offset_bottom = 909.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable2" parent="." unique_id=330616996 instance=ExtResource("3_62rcx")]
+offset_left = 869.0
+offset_top = 858.0
+offset_right = 933.0
+offset_bottom = 922.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable3" parent="." unique_id=1966905430 instance=ExtResource("3_62rcx")]
+offset_left = 828.0
+offset_top = 873.0
+offset_right = 892.0
+offset_bottom = 937.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable4" parent="." unique_id=323381172 instance=ExtResource("3_62rcx")]
+offset_left = 785.0
+offset_top = 886.0
+offset_right = 849.0
+offset_bottom = 950.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable5" parent="." unique_id=167590116 instance=ExtResource("3_62rcx")]
+offset_left = 749.0
+offset_top = 896.0
+offset_right = 813.0
+offset_bottom = 960.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable6" parent="." unique_id=369845287 instance=ExtResource("3_62rcx")]
+offset_left = 790.0
+offset_top = 917.0
+offset_right = 854.0
+offset_bottom = 981.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable7" parent="." unique_id=905952330 instance=ExtResource("3_62rcx")]
+offset_left = 834.0
+offset_top = 904.0
+offset_right = 898.0
+offset_bottom = 968.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable8" parent="." unique_id=761365120 instance=ExtResource("3_62rcx")]
+offset_left = 897.0
+offset_top = 879.0
+offset_right = 961.0
+offset_bottom = 943.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable9" parent="." unique_id=1191911 instance=ExtResource("3_62rcx")]
+offset_left = 946.0
+offset_top = 861.0
+offset_right = 1010.0
+offset_bottom = 925.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable10" parent="." unique_id=1430653405 instance=ExtResource("3_62rcx")]
+offset_left = 999.0
+offset_top = 886.0
+offset_right = 1063.0
+offset_bottom = 950.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable11" parent="." unique_id=1262885306 instance=ExtResource("3_62rcx")]
+offset_left = 962.0
+offset_top = 910.0
+offset_right = 1026.0
+offset_bottom = 974.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable12" parent="." unique_id=1490213320 instance=ExtResource("3_62rcx")]
+offset_left = 920.0
+offset_top = 920.0
+offset_right = 984.0
+offset_bottom = 984.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable13" parent="." unique_id=2070446264 instance=ExtResource("3_62rcx")]
+offset_left = 878.0
+offset_top = 931.0
+offset_right = 942.0
+offset_bottom = 995.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable14" parent="." unique_id=1937113588 instance=ExtResource("3_62rcx")]
+offset_left = 844.0
+offset_top = 940.0
+offset_right = 908.0
+offset_bottom = 1004.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable15" parent="." unique_id=800413060 instance=ExtResource("3_62rcx")]
+offset_left = 880.0
+offset_top = 958.0
+offset_right = 944.0
+offset_bottom = 1022.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable16" parent="." unique_id=511799072 instance=ExtResource("3_62rcx")]
+offset_left = 925.0
+offset_top = 983.0
+offset_right = 989.0
+offset_bottom = 1047.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable17" parent="." unique_id=1678100795 instance=ExtResource("3_62rcx")]
+offset_left = 954.0
+offset_top = 995.0
+offset_right = 1018.0
+offset_bottom = 1059.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable18" parent="." unique_id=1328254540 instance=ExtResource("3_62rcx")]
+offset_left = 991.0
+offset_top = 975.0
+offset_right = 1055.0
+offset_bottom = 1039.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable19" parent="." unique_id=685596176 instance=ExtResource("3_62rcx")]
+offset_left = 937.0
+offset_top = 953.0
+offset_right = 1001.0
+offset_bottom = 1017.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable20" parent="." unique_id=1054058780 instance=ExtResource("3_62rcx")]
+offset_left = 995.0
+offset_top = 933.0
+offset_right = 1059.0
+offset_bottom = 997.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable21" parent="." unique_id=1883833060 instance=ExtResource("3_62rcx")]
+offset_left = 1045.0
+offset_top = 912.0
+offset_right = 1109.0
+offset_bottom = 976.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable22" parent="." unique_id=475122691 instance=ExtResource("3_62rcx")]
+offset_left = 1098.0
+offset_top = 931.0
+offset_right = 1162.0
+offset_bottom = 995.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable23" parent="." unique_id=1978250104 instance=ExtResource("3_62rcx")]
+offset_left = 1029.0
+offset_top = 945.0
+offset_right = 1093.0
+offset_bottom = 1009.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable24" parent="." unique_id=824923196 instance=ExtResource("3_62rcx")]
+offset_left = 1069.0
+offset_top = 967.0
+offset_right = 1133.0
+offset_bottom = 1031.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable25" parent="." unique_id=183312335 instance=ExtResource("3_62rcx")]
+offset_left = 1027.0
+offset_top = 986.0
+offset_right = 1091.0
+offset_bottom = 1050.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable26" parent="." unique_id=377693044 instance=ExtResource("3_62rcx")]
+offset_left = 1124.0
+offset_top = 950.0
+offset_right = 1188.0
+offset_bottom = 1014.0
+nom_de_la_plante = "Riz"
+
+[node name="Vache1" parent="." unique_id=267736958 instance=ExtResource("4_wbr5x")]
+position = Vector2(1437.3125, 283.68747)
+scale = Vector2(0.44287038, 0.5336914)
+
+[node name="Vache2" parent="." unique_id=645453583 instance=ExtResource("4_wbr5x")]
+position = Vector2(1556.0001, 341.00003)
+scale = Vector2(0.49096638, 0.5336914)
+sprite_frames = SubResource("SpriteFrames_tfshq")
+
+[node name="Vache3" parent="." unique_id=825755611 instance=ExtResource("6_2ty0u")]
+position = Vector2(1583, 396)
+scale = Vector2(0.51169574, 0.47740653)
+
+[node name="Vache4" parent="." unique_id=817379838 instance=ExtResource("6_2ty0u")]
+position = Vector2(1358, 298)
+scale = Vector2(0.46198785, 0.43102962)
