@@ -2,10 +2,43 @@
 
 [ext_resource type="Texture2D" uid="uid://dowheoleexlwy" path="res://Scène_Home_Rakoto/Home_Rakoto.png" id="1_yne1g"]
 [ext_resource type="Script" uid="uid://bqt52ysroin5n" path="res://inventory_ui.gd" id="2_62rcx"]
+[ext_resource type="Texture2D" uid="uid://bjivyjsfvi4c5" path="res://Scène_Home_Rakoto/basse_cours.png" id="2_hsbxi"]
+[ext_resource type="Script" uid="uid://pv5xo6v6gdi7" path="res://Scène_Home_Rakoto/scripts/basse_cours.gd" id="2_pfk8b"]
 [ext_resource type="PackedScene" uid="uid://dik1yv7ig7q23" path="res://PlanteCliquable.tscn" id="3_62rcx"]
+[ext_resource type="Texture2D" uid="uid://di5vrwuoi0mie" path="res://Scène_Home_Rakoto/lock.png" id="3_p0try"]
+[ext_resource type="Texture2D" uid="uid://dpsg745fw1odb" path="res://Scène_Home_Rakoto/usine.png" id="3_sd8r1"]
 [ext_resource type="Texture2D" uid="uid://ccbk285f3rhkf" path="res://Vache/vache_knock.png" id="4_2ij74"]
+[ext_resource type="Script" uid="uid://c18gv5el8yajp" path="res://Scène_Home_Rakoto/scripts/usine.gd" id="4_4yvgc"]
 [ext_resource type="PackedScene" uid="uid://d02mmcsuqyvfa" path="res://vache_1.tscn" id="4_wbr5x"]
+[ext_resource type="Texture2D" uid="uid://cdkfgkgpxj2ig" path="res://Scène_Home_Rakoto/rizziere.png" id="5_lcxsv"]
 [ext_resource type="PackedScene" uid="uid://gig85x7omou8" path="res://vache_3.tscn" id="6_2ty0u"]
+[ext_resource type="Texture2D" uid="uid://dk2kchmnbjurx" path="res://Scène_Home_Rakoto/manioc.png" id="7_4yvgc"]
+[ext_resource type="Script" uid="uid://b8uikveeo62v4" path="res://Scène_Home_Rakoto/scripts/manioc_2.gd" id="7_j4ucn"]
+[ext_resource type="Texture2D" uid="uid://0mre7mhsiemn" path="res://Scène_Home_Rakoto/pomme_de_terre.png" id="8_j4ucn"]
+[ext_resource type="Script" uid="uid://c1c2hjgwuulgx" path="res://Scène_Home_Rakoto/scripts/pdt.gd" id="9_j4ucn"]
+[ext_resource type="Texture2D" uid="uid://bqdxm4w5exucl" path="res://Scène_Home_Rakoto/etable.png" id="9_w7a4v"]
+[ext_resource type="Script" uid="uid://di8greqydiuxv" path="res://Scène_Home_Rakoto/scripts/etable.gd" id="11_w7a4v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfk8b"]
+radius = 117.153786
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yvgc"]
+radius = 168.14577
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j4ucn"]
+radius = 123.975815
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7a4v"]
+radius = 90.27181
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cp3s8"]
+radius = 97.49874
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_af6di"]
+radius = 182.88794
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0try"]
+radius = 84.0238
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jhy4"]
 atlas = ExtResource("4_2ij74")
@@ -185,7 +218,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wglbu")
 }],
-"loop": 1,
+"loop": true,
 "name": &"cow_knocking",
 "speed": 4.0
 }]
@@ -197,6 +230,126 @@ position = Vector2(960.8699, 529)
 scale = Vector2(1.4229103, 0.9424893)
 texture = ExtResource("1_yne1g")
 
+[node name="batiments" type="Node2D" parent="." unique_id=870158631]
+position = Vector2(0, -6.1035156e-05)
+
+[node name="basse_cours" type="Area2D" parent="batiments" unique_id=1082638783]
+script = ExtResource("2_pfk8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/basse_cours" unique_id=26408101]
+position = Vector2(971, 495)
+scale = Vector2(1.4278847, 1.009901)
+texture = ExtResource("2_hsbxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batiments/basse_cours" unique_id=72972983]
+position = Vector2(938, 471.00006)
+shape = SubResource("CircleShape2D_pfk8b")
+
+[node name="lock" type="Sprite2D" parent="batiments/basse_cours" unique_id=365898665]
+position = Vector2(947.99994, 471.0001)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
+[node name="usine" type="Area2D" parent="batiments" unique_id=994016946]
+script = ExtResource("4_4yvgc")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/usine" unique_id=1475854165]
+position = Vector2(404, 369.5)
+scale = Vector2(1.4381139, 1)
+texture = ExtResource("3_sd8r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batiments/usine" unique_id=1034104659]
+position = Vector2(345, 375.00006)
+shape = SubResource("CircleShape2D_4yvgc")
+
+[node name="lock" type="Sprite2D" parent="batiments/usine" unique_id=1757689711]
+position = Vector2(367.00006, 399.00006)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
+[node name="rizziere" type="Area2D" parent="batiments" unique_id=1670700641]
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/rizziere" unique_id=1135371709]
+position = Vector2(960, 944.0001)
+scale = Vector2(0.9313712, 0.5976824)
+texture = ExtResource("5_lcxsv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batiments/rizziere" unique_id=1119166885]
+position = Vector2(953, 967.00006)
+shape = SubResource("CircleShape2D_j4ucn")
+
+[node name="manioc2" type="Area2D" parent="batiments" unique_id=1089182672]
+script = ExtResource("7_j4ucn")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/manioc2" unique_id=357039496]
+position = Vector2(856.50006, 735.50006)
+scale = Vector2(0.87604696, 0.5956936)
+texture = ExtResource("7_4yvgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batiments/manioc2" unique_id=928139970]
+position = Vector2(843, 719.00006)
+shape = SubResource("CircleShape2D_w7a4v")
+
+[node name="lock" type="Sprite2D" parent="batiments/manioc2" unique_id=1863386663]
+position = Vector2(849, 707.00006)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
+[node name="pdt" type="Area2D" parent="batiments" unique_id=487895008]
+script = ExtResource("9_j4ucn")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/pdt" unique_id=524867637]
+position = Vector2(1480.5, 686.00006)
+scale = Vector2(1.2861493, 0.90000004)
+texture = ExtResource("8_j4ucn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="batiments/pdt" unique_id=1001870518]
+position = Vector2(1625, 722.00006)
+shape = SubResource("CircleShape2D_cp3s8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="batiments/pdt" unique_id=571204648]
+position = Vector2(1323, 631.00006)
+shape = SubResource("CircleShape2D_cp3s8")
+
+[node name="lock" type="Sprite2D" parent="batiments/pdt" unique_id=925907990]
+position = Vector2(1446, 675.00006)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
+[node name="etable" type="Area2D" parent="batiments" unique_id=1948945144]
+script = ExtResource("11_w7a4v")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/etable" unique_id=1544320024]
+position = Vector2(1520, 371.00006)
+scale = Vector2(1.4278847, 1.009901)
+texture = ExtResource("9_w7a4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batiments/etable" unique_id=1912975205]
+position = Vector2(1528, 344.00006)
+shape = SubResource("CircleShape2D_af6di")
+
+[node name="lock" type="Sprite2D" parent="batiments/etable" unique_id=1199249283]
+position = Vector2(1464, 393.00006)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
+[node name="manioc3" type="Area2D" parent="batiments" unique_id=269331672]
+script = ExtResource("7_j4ucn")
+
+[node name="Sprite2D" type="Sprite2D" parent="batiments/manioc3" unique_id=1084334405]
+position = Vector2(585, 838.00006)
+scale = Vector2(0.8844222, 0.5382775)
+texture = ExtResource("7_4yvgc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="batiments/manioc3" unique_id=1162235537]
+position = Vector2(592, 823.00006)
+shape = SubResource("CircleShape2D_p0try")
+
+[node name="lock" type="Sprite2D" parent="batiments/manioc3" unique_id=650680550]
+position = Vector2(573, 819.00006)
+scale = Vector2(0.444, 0.384)
+texture = ExtResource("3_p0try")
+
 [node name="InventoryUI" type="Control" parent="." unique_id=847754394]
 layout_mode = 3
 anchors_preset = 6
@@ -207,345 +360,7 @@ anchor_bottom = 0.5
 grow_horizontal = 0
 grow_vertical = 2
 script = ExtResource("2_62rcx")
-
-[node name="MaisCliquable" parent="." unique_id=967558024 instance=ExtResource("3_62rcx")]
-offset_left = 235.0
-offset_top = 621.0
-offset_right = 296.0
-offset_bottom = 677.0
-
-[node name="MaisCliquable2" parent="." unique_id=562169426 instance=ExtResource("3_62rcx")]
-offset_left = 185.0
-offset_top = 640.0
-offset_right = 246.0
-offset_bottom = 696.0
-
-[node name="MaisCliquable3" parent="." unique_id=15425268 instance=ExtResource("3_62rcx")]
-offset_left = 128.0
-offset_top = 663.0
-offset_right = 189.0
-offset_bottom = 719.0
-
-[node name="MaisCliquable4" parent="." unique_id=469083552 instance=ExtResource("3_62rcx")]
-offset_left = 148.0
-offset_top = 686.0
-offset_right = 209.0
-offset_bottom = 742.0
-
-[node name="MaisCliquable5" parent="." unique_id=1359070015 instance=ExtResource("3_62rcx")]
-offset_left = 193.0
-offset_top = 668.0
-offset_right = 254.0
-offset_bottom = 724.0
-
-[node name="MaisCliquable6" parent="." unique_id=1614235985 instance=ExtResource("3_62rcx")]
-offset_left = 253.0
-offset_top = 645.0
-offset_right = 314.0
-offset_bottom = 701.0
-
-[node name="MaisCliquable7" parent="." unique_id=2057758604 instance=ExtResource("3_62rcx")]
-offset_left = 200.0
-offset_top = 713.0
-offset_right = 261.0
-offset_bottom = 769.0
-
-[node name="MaisCliquable8" parent="." unique_id=437609255 instance=ExtResource("3_62rcx")]
-offset_left = 333.0
-offset_top = 668.0
-offset_right = 394.0
-offset_bottom = 724.0
-
-[node name="MaisCliquable9" parent="." unique_id=1629498107 instance=ExtResource("3_62rcx")]
-offset_left = 314.0
-offset_top = 665.0
-offset_right = 375.0
-offset_bottom = 721.0
-
-[node name="MaisCliquable10" parent="." unique_id=2081679059 instance=ExtResource("3_62rcx")]
-offset_left = 350.0
-offset_top = 688.0
-offset_right = 411.0
-offset_bottom = 744.0
-
-[node name="MaisCliquable11" parent="." unique_id=1069969853 instance=ExtResource("3_62rcx")]
-offset_left = 409.0
-offset_top = 702.0
-offset_right = 470.0
-offset_bottom = 758.0
-
-[node name="MaisCliquable12" parent="." unique_id=2063614103 instance=ExtResource("3_62rcx")]
-offset_left = 318.0
-offset_top = 702.0
-offset_right = 379.0
-offset_bottom = 758.0
-
-[node name="MaisCliquable13" parent="." unique_id=855415409 instance=ExtResource("3_62rcx")]
-offset_left = 368.0
-offset_top = 700.0
-offset_right = 429.0
-offset_bottom = 756.0
-
-[node name="MaisCliquable14" parent="." unique_id=1181805949 instance=ExtResource("3_62rcx")]
-offset_left = 314.0
-offset_top = 734.0
-offset_right = 375.0
-offset_bottom = 790.0
-
-[node name="MaisCliquable15" parent="." unique_id=2013875552 instance=ExtResource("3_62rcx")]
-offset_left = 239.0
-offset_top = 730.0
-offset_right = 300.0
-offset_bottom = 786.0
-
-[node name="MaisCliquable16" parent="." unique_id=266385365 instance=ExtResource("3_62rcx")]
-offset_left = 324.0
-offset_top = 718.0
-offset_right = 385.0
-offset_bottom = 774.0
-
-[node name="MaisCliquable17" parent="." unique_id=917659770 instance=ExtResource("3_62rcx")]
-offset_left = 276.0
-offset_top = 664.0
-offset_right = 337.0
-offset_bottom = 720.0
-
-[node name="MaisCliquable18" parent="." unique_id=286673776 instance=ExtResource("3_62rcx")]
-offset_left = 276.0
-offset_top = 664.0
-offset_right = 337.0
-offset_bottom = 720.0
-
-[node name="ManiocCliquable" parent="." unique_id=1892924134 instance=ExtResource("3_62rcx")]
-offset_left = 257.0
-offset_top = 695.0
-offset_right = 321.0
-offset_bottom = 759.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable2" parent="." unique_id=613986468 instance=ExtResource("3_62rcx")]
-offset_left = 258.0
-offset_top = 713.0
-offset_right = 322.0
-offset_bottom = 777.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable3" parent="." unique_id=227634362 instance=ExtResource("3_62rcx")]
-offset_left = 256.0
-offset_top = 728.0
-offset_right = 320.0
-offset_bottom = 792.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable4" parent="." unique_id=1199494596 instance=ExtResource("3_62rcx")]
-offset_left = 291.0
-offset_top = 715.0
-offset_right = 355.0
-offset_bottom = 779.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable5" parent="." unique_id=1632618524 instance=ExtResource("3_62rcx")]
-offset_left = 291.0
-offset_top = 736.0
-offset_right = 355.0
-offset_bottom = 800.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable6" parent="." unique_id=82861820 instance=ExtResource("3_62rcx")]
-offset_left = 301.0
-offset_top = 676.0
-offset_right = 365.0
-offset_bottom = 740.0
-nom_de_la_plante = "Manioc"
-
-[node name="ManiocCliquable7" parent="." unique_id=1391601044 instance=ExtResource("3_62rcx")]
-offset_left = 276.0
-offset_top = 676.0
-offset_right = 340.0
-offset_bottom = 740.0
-nom_de_la_plante = "Manioc"
-
-[node name="RizCliquable" parent="." unique_id=1005936214 instance=ExtResource("3_62rcx")]
-offset_left = 905.0
-offset_top = 845.0
-offset_right = 969.0
-offset_bottom = 909.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable2" parent="." unique_id=330616996 instance=ExtResource("3_62rcx")]
-offset_left = 869.0
-offset_top = 858.0
-offset_right = 933.0
-offset_bottom = 922.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable3" parent="." unique_id=1966905430 instance=ExtResource("3_62rcx")]
-offset_left = 828.0
-offset_top = 873.0
-offset_right = 892.0
-offset_bottom = 937.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable4" parent="." unique_id=323381172 instance=ExtResource("3_62rcx")]
-offset_left = 785.0
-offset_top = 886.0
-offset_right = 849.0
-offset_bottom = 950.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable5" parent="." unique_id=167590116 instance=ExtResource("3_62rcx")]
-offset_left = 749.0
-offset_top = 896.0
-offset_right = 813.0
-offset_bottom = 960.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable6" parent="." unique_id=369845287 instance=ExtResource("3_62rcx")]
-offset_left = 790.0
-offset_top = 917.0
-offset_right = 854.0
-offset_bottom = 981.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable7" parent="." unique_id=905952330 instance=ExtResource("3_62rcx")]
-offset_left = 834.0
-offset_top = 904.0
-offset_right = 898.0
-offset_bottom = 968.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable8" parent="." unique_id=761365120 instance=ExtResource("3_62rcx")]
-offset_left = 897.0
-offset_top = 879.0
-offset_right = 961.0
-offset_bottom = 943.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable9" parent="." unique_id=1191911 instance=ExtResource("3_62rcx")]
-offset_left = 946.0
-offset_top = 861.0
-offset_right = 1010.0
-offset_bottom = 925.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable10" parent="." unique_id=1430653405 instance=ExtResource("3_62rcx")]
-offset_left = 999.0
-offset_top = 886.0
-offset_right = 1063.0
-offset_bottom = 950.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable11" parent="." unique_id=1262885306 instance=ExtResource("3_62rcx")]
-offset_left = 962.0
-offset_top = 910.0
-offset_right = 1026.0
-offset_bottom = 974.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable12" parent="." unique_id=1490213320 instance=ExtResource("3_62rcx")]
-offset_left = 920.0
-offset_top = 920.0
-offset_right = 984.0
-offset_bottom = 984.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable13" parent="." unique_id=2070446264 instance=ExtResource("3_62rcx")]
-offset_left = 878.0
-offset_top = 931.0
-offset_right = 942.0
-offset_bottom = 995.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable14" parent="." unique_id=1937113588 instance=ExtResource("3_62rcx")]
-offset_left = 844.0
-offset_top = 940.0
-offset_right = 908.0
-offset_bottom = 1004.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable15" parent="." unique_id=800413060 instance=ExtResource("3_62rcx")]
-offset_left = 880.0
-offset_top = 958.0
-offset_right = 944.0
-offset_bottom = 1022.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable16" parent="." unique_id=511799072 instance=ExtResource("3_62rcx")]
-offset_left = 925.0
-offset_top = 983.0
-offset_right = 989.0
-offset_bottom = 1047.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable17" parent="." unique_id=1678100795 instance=ExtResource("3_62rcx")]
-offset_left = 954.0
-offset_top = 995.0
-offset_right = 1018.0
-offset_bottom = 1059.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable18" parent="." unique_id=1328254540 instance=ExtResource("3_62rcx")]
-offset_left = 991.0
-offset_top = 975.0
-offset_right = 1055.0
-offset_bottom = 1039.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable19" parent="." unique_id=685596176 instance=ExtResource("3_62rcx")]
-offset_left = 937.0
-offset_top = 953.0
-offset_right = 1001.0
-offset_bottom = 1017.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable20" parent="." unique_id=1054058780 instance=ExtResource("3_62rcx")]
-offset_left = 995.0
-offset_top = 933.0
-offset_right = 1059.0
-offset_bottom = 997.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable21" parent="." unique_id=1883833060 instance=ExtResource("3_62rcx")]
-offset_left = 1045.0
-offset_top = 912.0
-offset_right = 1109.0
-offset_bottom = 976.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable22" parent="." unique_id=475122691 instance=ExtResource("3_62rcx")]
-offset_left = 1098.0
-offset_top = 931.0
-offset_right = 1162.0
-offset_bottom = 995.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable23" parent="." unique_id=1978250104 instance=ExtResource("3_62rcx")]
-offset_left = 1029.0
-offset_top = 945.0
-offset_right = 1093.0
-offset_bottom = 1009.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable24" parent="." unique_id=824923196 instance=ExtResource("3_62rcx")]
-offset_left = 1069.0
-offset_top = 967.0
-offset_right = 1133.0
-offset_bottom = 1031.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable25" parent="." unique_id=183312335 instance=ExtResource("3_62rcx")]
-offset_left = 1027.0
-offset_top = 986.0
-offset_right = 1091.0
-offset_bottom = 1050.0
-nom_de_la_plante = "Riz"
-
-[node name="RizCliquable26" parent="." unique_id=377693044 instance=ExtResource("3_62rcx")]
-offset_left = 1124.0
-offset_top = 950.0
-offset_right = 1188.0
-offset_bottom = 1014.0
-nom_de_la_plante = "Riz"
+metadata/_edit_use_anchors_ = true
 
 [node name="Vache1" parent="." unique_id=267736958 instance=ExtResource("4_wbr5x")]
 position = Vector2(1437.3125, 283.68747)
@@ -555,6 +370,8 @@ scale = Vector2(0.44287038, 0.5336914)
 position = Vector2(1556.0001, 341.00003)
 scale = Vector2(0.49096638, 0.5336914)
 sprite_frames = SubResource("SpriteFrames_tfshq")
+frame = 0
+frame_progress = 0.0
 
 [node name="Vache3" parent="." unique_id=825755611 instance=ExtResource("6_2ty0u")]
 position = Vector2(1583, 396)
@@ -563,3 +380,505 @@ scale = Vector2(0.51169574, 0.47740653)
 [node name="Vache4" parent="." unique_id=817379838 instance=ExtResource("6_2ty0u")]
 position = Vector2(1358, 298)
 scale = Vector2(0.46198785, 0.43102962)
+
+[node name="mais" type="Node2D" parent="." unique_id=1971928375]
+
+[node name="ManiocCliquable" parent="mais" unique_id=619554575 instance=ExtResource("3_62rcx")]
+offset_left = 257.0
+offset_top = 695.0
+offset_right = 321.0
+offset_bottom = 759.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable2" parent="mais" unique_id=1540806046 instance=ExtResource("3_62rcx")]
+offset_left = 258.0
+offset_top = 713.0
+offset_right = 322.0
+offset_bottom = 777.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable3" parent="mais" unique_id=334908189 instance=ExtResource("3_62rcx")]
+offset_left = 256.0
+offset_top = 728.0
+offset_right = 320.0
+offset_bottom = 792.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable4" parent="mais" unique_id=303544241 instance=ExtResource("3_62rcx")]
+offset_left = 291.0
+offset_top = 715.0
+offset_right = 355.0
+offset_bottom = 779.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable5" parent="mais" unique_id=925552676 instance=ExtResource("3_62rcx")]
+offset_left = 291.0
+offset_top = 736.0
+offset_right = 355.0
+offset_bottom = 800.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable6" parent="mais" unique_id=2083527664 instance=ExtResource("3_62rcx")]
+offset_left = 301.0
+offset_top = 676.0
+offset_right = 365.0
+offset_bottom = 740.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable7" parent="mais" unique_id=430030088 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 676.0
+offset_right = 340.0
+offset_bottom = 740.0
+nom_de_la_plante = "Manioc"
+
+[node name="MaisCliquable" parent="mais" unique_id=967558024 instance=ExtResource("3_62rcx")]
+offset_left = 235.0
+offset_top = 621.0
+offset_right = 296.0
+offset_bottom = 677.0
+
+[node name="MaisCliquable2" parent="mais" unique_id=1990268555 instance=ExtResource("3_62rcx")]
+offset_left = 185.0
+offset_top = 640.0
+offset_right = 246.0
+offset_bottom = 696.0
+
+[node name="MaisCliquable3" parent="mais" unique_id=1202129353 instance=ExtResource("3_62rcx")]
+offset_left = 128.0
+offset_top = 663.0
+offset_right = 189.0
+offset_bottom = 719.0
+
+[node name="MaisCliquable4" parent="mais" unique_id=231649436 instance=ExtResource("3_62rcx")]
+offset_left = 148.0
+offset_top = 686.0
+offset_right = 209.0
+offset_bottom = 742.0
+
+[node name="MaisCliquable5" parent="mais" unique_id=1590032865 instance=ExtResource("3_62rcx")]
+offset_left = 193.0
+offset_top = 668.0
+offset_right = 254.0
+offset_bottom = 724.0
+
+[node name="MaisCliquable6" parent="mais" unique_id=180650932 instance=ExtResource("3_62rcx")]
+offset_left = 253.0
+offset_top = 645.0
+offset_right = 314.0
+offset_bottom = 701.0
+
+[node name="MaisCliquable7" parent="mais" unique_id=318547825 instance=ExtResource("3_62rcx")]
+offset_left = 200.0
+offset_top = 713.0
+offset_right = 261.0
+offset_bottom = 769.0
+
+[node name="MaisCliquable8" parent="mais" unique_id=1856330322 instance=ExtResource("3_62rcx")]
+offset_left = 333.0
+offset_top = 668.0
+offset_right = 394.0
+offset_bottom = 724.0
+
+[node name="MaisCliquable9" parent="mais" unique_id=1944456599 instance=ExtResource("3_62rcx")]
+offset_left = 314.0
+offset_top = 665.0
+offset_right = 375.0
+offset_bottom = 721.0
+
+[node name="MaisCliquable10" parent="mais" unique_id=518319058 instance=ExtResource("3_62rcx")]
+offset_left = 350.0
+offset_top = 688.0
+offset_right = 411.0
+offset_bottom = 744.0
+
+[node name="MaisCliquable11" parent="mais" unique_id=1040660317 instance=ExtResource("3_62rcx")]
+offset_left = 409.0
+offset_top = 702.0
+offset_right = 470.0
+offset_bottom = 758.0
+
+[node name="MaisCliquable12" parent="mais" unique_id=755138381 instance=ExtResource("3_62rcx")]
+offset_left = 318.0
+offset_top = 702.0
+offset_right = 379.0
+offset_bottom = 758.0
+
+[node name="MaisCliquable13" parent="mais" unique_id=1570451036 instance=ExtResource("3_62rcx")]
+offset_left = 368.0
+offset_top = 700.0
+offset_right = 429.0
+offset_bottom = 756.0
+
+[node name="MaisCliquable14" parent="mais" unique_id=687437323 instance=ExtResource("3_62rcx")]
+offset_left = 314.0
+offset_top = 734.0
+offset_right = 375.0
+offset_bottom = 790.0
+
+[node name="MaisCliquable15" parent="mais" unique_id=1262214229 instance=ExtResource("3_62rcx")]
+offset_left = 239.0
+offset_top = 730.0
+offset_right = 300.0
+offset_bottom = 786.0
+
+[node name="MaisCliquable16" parent="mais" unique_id=1511146967 instance=ExtResource("3_62rcx")]
+offset_left = 324.0
+offset_top = 718.0
+offset_right = 385.0
+offset_bottom = 774.0
+
+[node name="MaisCliquable17" parent="mais" unique_id=610468111 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 664.0
+offset_right = 337.0
+offset_bottom = 720.0
+
+[node name="MaisCliquable18" parent="mais" unique_id=1993299125 instance=ExtResource("3_62rcx")]
+offset_left = 276.0
+offset_top = 664.0
+offset_right = 337.0
+offset_bottom = 720.0
+
+[node name="mais2" type="Node2D" parent="." unique_id=967050122]
+
+[node name="ManiocCliquable" parent="mais2" unique_id=849137237 instance=ExtResource("3_62rcx")]
+offset_left = 1157.0
+offset_top = 808.0
+offset_right = 1221.0
+offset_bottom = 872.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable2" parent="mais2" unique_id=2003877236 instance=ExtResource("3_62rcx")]
+offset_left = 1158.0
+offset_top = 826.0
+offset_right = 1222.0
+offset_bottom = 890.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable3" parent="mais2" unique_id=1403236222 instance=ExtResource("3_62rcx")]
+offset_left = 1156.0
+offset_top = 841.0
+offset_right = 1220.0
+offset_bottom = 905.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable4" parent="mais2" unique_id=293811747 instance=ExtResource("3_62rcx")]
+offset_left = 1191.0
+offset_top = 828.0
+offset_right = 1255.0
+offset_bottom = 892.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable5" parent="mais2" unique_id=319002140 instance=ExtResource("3_62rcx")]
+offset_left = 1191.0
+offset_top = 849.0
+offset_right = 1255.0
+offset_bottom = 913.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable6" parent="mais2" unique_id=153915769 instance=ExtResource("3_62rcx")]
+offset_left = 1201.0
+offset_top = 789.0
+offset_right = 1265.0
+offset_bottom = 853.0
+nom_de_la_plante = "Manioc"
+
+[node name="ManiocCliquable7" parent="mais2" unique_id=1560356418 instance=ExtResource("3_62rcx")]
+offset_left = 1268.0
+offset_top = 866.0
+offset_right = 1332.0
+offset_bottom = 930.0
+nom_de_la_plante = "Manioc"
+
+[node name="MaisCliquable" parent="mais2" unique_id=1201499042 instance=ExtResource("3_62rcx")]
+offset_left = 1135.0
+offset_top = 734.0
+offset_right = 1196.0
+offset_bottom = 790.0
+
+[node name="MaisCliquable2" parent="mais2" unique_id=1682259761 instance=ExtResource("3_62rcx")]
+offset_left = 1085.0
+offset_top = 753.0
+offset_right = 1146.0
+offset_bottom = 809.0
+
+[node name="MaisCliquable3" parent="mais2" unique_id=1260813641 instance=ExtResource("3_62rcx")]
+offset_left = 1028.0
+offset_top = 776.0
+offset_right = 1089.0
+offset_bottom = 832.0
+
+[node name="MaisCliquable4" parent="mais2" unique_id=1307611183 instance=ExtResource("3_62rcx")]
+offset_left = 1048.0
+offset_top = 799.0
+offset_right = 1109.0
+offset_bottom = 855.0
+
+[node name="MaisCliquable5" parent="mais2" unique_id=743005811 instance=ExtResource("3_62rcx")]
+offset_left = 1093.0
+offset_top = 781.0
+offset_right = 1154.0
+offset_bottom = 837.0
+
+[node name="MaisCliquable6" parent="mais2" unique_id=1618883832 instance=ExtResource("3_62rcx")]
+offset_left = 1153.0
+offset_top = 758.0
+offset_right = 1214.0
+offset_bottom = 814.0
+
+[node name="MaisCliquable7" parent="mais2" unique_id=854598328 instance=ExtResource("3_62rcx")]
+offset_left = 1100.0
+offset_top = 826.0
+offset_right = 1161.0
+offset_bottom = 882.0
+
+[node name="MaisCliquable8" parent="mais2" unique_id=41301184 instance=ExtResource("3_62rcx")]
+offset_left = 1233.0
+offset_top = 781.0
+offset_right = 1294.0
+offset_bottom = 837.0
+
+[node name="MaisCliquable9" parent="mais2" unique_id=1674604717 instance=ExtResource("3_62rcx")]
+offset_left = 1214.0
+offset_top = 778.0
+offset_right = 1275.0
+offset_bottom = 834.0
+
+[node name="MaisCliquable10" parent="mais2" unique_id=307996961 instance=ExtResource("3_62rcx")]
+offset_left = 1250.0
+offset_top = 801.0
+offset_right = 1311.0
+offset_bottom = 857.0
+
+[node name="MaisCliquable11" parent="mais2" unique_id=1724478135 instance=ExtResource("3_62rcx")]
+offset_left = 1309.0
+offset_top = 815.0
+offset_right = 1370.0
+offset_bottom = 871.0
+
+[node name="MaisCliquable12" parent="mais2" unique_id=5446203 instance=ExtResource("3_62rcx")]
+offset_left = 1218.0
+offset_top = 815.0
+offset_right = 1279.0
+offset_bottom = 871.0
+
+[node name="MaisCliquable13" parent="mais2" unique_id=1750622560 instance=ExtResource("3_62rcx")]
+offset_left = 1268.0
+offset_top = 813.0
+offset_right = 1329.0
+offset_bottom = 869.0
+
+[node name="MaisCliquable14" parent="mais2" unique_id=1245909233 instance=ExtResource("3_62rcx")]
+offset_left = 1214.0
+offset_top = 847.0
+offset_right = 1275.0
+offset_bottom = 903.0
+
+[node name="MaisCliquable15" parent="mais2" unique_id=590385756 instance=ExtResource("3_62rcx")]
+offset_left = 1139.0
+offset_top = 843.0
+offset_right = 1200.0
+offset_bottom = 899.0
+
+[node name="MaisCliquable16" parent="mais2" unique_id=19409800 instance=ExtResource("3_62rcx")]
+offset_left = 1224.0
+offset_top = 831.0
+offset_right = 1285.0
+offset_bottom = 887.0
+
+[node name="MaisCliquable17" parent="mais2" unique_id=1375249921 instance=ExtResource("3_62rcx")]
+offset_left = 1176.0
+offset_top = 777.0
+offset_right = 1237.0
+offset_bottom = 833.0
+
+[node name="MaisCliquable18" parent="mais2" unique_id=1218699799 instance=ExtResource("3_62rcx")]
+offset_left = 1176.0
+offset_top = 777.0
+offset_right = 1237.0
+offset_bottom = 833.0
+
+[node name="riz" type="Node2D" parent="." unique_id=400471837]
+
+[node name="RizCliquable" parent="riz" unique_id=1587220562 instance=ExtResource("3_62rcx")]
+offset_left = 905.0
+offset_top = 845.0
+offset_right = 969.0
+offset_bottom = 909.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable2" parent="riz" unique_id=478201063 instance=ExtResource("3_62rcx")]
+offset_left = 869.0
+offset_top = 858.0
+offset_right = 933.0
+offset_bottom = 922.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable3" parent="riz" unique_id=692627261 instance=ExtResource("3_62rcx")]
+offset_left = 828.0
+offset_top = 873.0
+offset_right = 892.0
+offset_bottom = 937.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable4" parent="riz" unique_id=1327634996 instance=ExtResource("3_62rcx")]
+offset_left = 785.0
+offset_top = 886.0
+offset_right = 849.0
+offset_bottom = 950.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable5" parent="riz" unique_id=1077295668 instance=ExtResource("3_62rcx")]
+offset_left = 749.0
+offset_top = 896.0
+offset_right = 813.0
+offset_bottom = 960.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable6" parent="riz" unique_id=1819660275 instance=ExtResource("3_62rcx")]
+offset_left = 790.0
+offset_top = 917.0
+offset_right = 854.0
+offset_bottom = 981.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable7" parent="riz" unique_id=130055081 instance=ExtResource("3_62rcx")]
+offset_left = 834.0
+offset_top = 904.0
+offset_right = 898.0
+offset_bottom = 968.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable8" parent="riz" unique_id=1290881565 instance=ExtResource("3_62rcx")]
+offset_left = 897.0
+offset_top = 879.0
+offset_right = 961.0
+offset_bottom = 943.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable9" parent="riz" unique_id=1383645289 instance=ExtResource("3_62rcx")]
+offset_left = 946.0
+offset_top = 861.0
+offset_right = 1010.0
+offset_bottom = 925.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable10" parent="riz" unique_id=536278361 instance=ExtResource("3_62rcx")]
+offset_left = 999.0
+offset_top = 886.0
+offset_right = 1063.0
+offset_bottom = 950.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable11" parent="riz" unique_id=237579191 instance=ExtResource("3_62rcx")]
+offset_left = 962.0
+offset_top = 910.0
+offset_right = 1026.0
+offset_bottom = 974.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable12" parent="riz" unique_id=508173397 instance=ExtResource("3_62rcx")]
+offset_left = 920.0
+offset_top = 920.0
+offset_right = 984.0
+offset_bottom = 984.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable13" parent="riz" unique_id=1357993590 instance=ExtResource("3_62rcx")]
+offset_left = 878.0
+offset_top = 931.0
+offset_right = 942.0
+offset_bottom = 995.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable14" parent="riz" unique_id=642870100 instance=ExtResource("3_62rcx")]
+offset_left = 844.0
+offset_top = 940.0
+offset_right = 908.0
+offset_bottom = 1004.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable15" parent="riz" unique_id=1411511720 instance=ExtResource("3_62rcx")]
+offset_left = 880.0
+offset_top = 958.0
+offset_right = 944.0
+offset_bottom = 1022.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable16" parent="riz" unique_id=71658335 instance=ExtResource("3_62rcx")]
+offset_left = 925.0
+offset_top = 983.0
+offset_right = 989.0
+offset_bottom = 1047.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable17" parent="riz" unique_id=299711552 instance=ExtResource("3_62rcx")]
+offset_left = 954.0
+offset_top = 995.0
+offset_right = 1018.0
+offset_bottom = 1059.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable18" parent="riz" unique_id=964326377 instance=ExtResource("3_62rcx")]
+offset_left = 991.0
+offset_top = 975.0
+offset_right = 1055.0
+offset_bottom = 1039.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable19" parent="riz" unique_id=677486428 instance=ExtResource("3_62rcx")]
+offset_left = 937.0
+offset_top = 953.0
+offset_right = 1001.0
+offset_bottom = 1017.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable20" parent="riz" unique_id=961730906 instance=ExtResource("3_62rcx")]
+offset_left = 995.0
+offset_top = 933.0
+offset_right = 1059.0
+offset_bottom = 997.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable21" parent="riz" unique_id=1360538251 instance=ExtResource("3_62rcx")]
+offset_left = 1045.0
+offset_top = 912.0
+offset_right = 1109.0
+offset_bottom = 976.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable22" parent="riz" unique_id=324372033 instance=ExtResource("3_62rcx")]
+offset_left = 1098.0
+offset_top = 931.0
+offset_right = 1162.0
+offset_bottom = 995.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable23" parent="riz" unique_id=2141442905 instance=ExtResource("3_62rcx")]
+offset_left = 1029.0
+offset_top = 945.0
+offset_right = 1093.0
+offset_bottom = 1009.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable24" parent="riz" unique_id=162951982 instance=ExtResource("3_62rcx")]
+offset_left = 1069.0
+offset_top = 967.0
+offset_right = 1133.0
+offset_bottom = 1031.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable25" parent="riz" unique_id=422965870 instance=ExtResource("3_62rcx")]
+offset_left = 1027.0
+offset_top = 986.0
+offset_right = 1091.0
+offset_bottom = 1050.0
+nom_de_la_plante = "Riz"
+
+[node name="RizCliquable26" parent="riz" unique_id=408063192 instance=ExtResource("3_62rcx")]
+offset_left = 1124.0
+offset_top = 950.0
+offset_right = 1188.0
+offset_bottom = 1014.0
+nom_de_la_plante = "Riz"
